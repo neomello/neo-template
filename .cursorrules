@@ -1,0 +1,20 @@
+# Cursor Rules — Personal Dev Workspace
+
+This workspace follows my personal development standards.
+These rules are authoritative.
+
+## Critical Rules
+
+- ALWAYS add a blank line after any Markdown header.
+- Use 2 spaces for indentation.
+- Remove trailing whitespace and add final newline.
+
+## References (consult when needed)
+
+- Work standards: `standards/README.md`
+- Markdown rules: `standards/markdown.rules.md`
+- AI behavior rules: `standards/ai.rules.md`
+- README template: `standards/readme.template.md`
+- Signature: `standards/readme.signature.md`
+- Links: `standards/links.md`
+
