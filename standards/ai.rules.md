@@ -1,19 +1,53 @@
-# AI Rules
+<!-- ai rules -->
 
-Rules for AI assistants working in this workspace.
+## Regras para IAs e Assistentes
 
-## Critical
+### Como Funciona
 
-1. Follow `.cursorrules` — it's authoritative
-2. Add blank line after Markdown headers
-3. Use 2 spaces for indentation
-4. Remove trailing whitespace
-5. Add final newline
+O Cursor lê automaticamente o `.cursorrules` na raiz do projeto. Este arquivo referencia os padrões em `standards/`.
 
-## When Editing Files
+### Quando Criar ou Editar Arquivos
 
-- Read existing code style first
-- Follow established patterns
-- Don't over-engineer
-- Keep changes minimal
+1. **SEMPRE** siga os padrões de Markdown (linha em branco após headers)
+2. **SEMPRE** use 2 espaços para indentação
+3. **SEMPRE** remova trailing whitespace
+4. **SEMPRE** adicione newline final
+5. **SEMPRE** use LF line endings (Unix)
 
+### Padrões de Código
+
+- **Indentação**: 2 espaços (não tabs)
+- **Encoding**: UTF-8
+- **Line endings**: LF (Unix)
+- **Trailing whitespace**: Remover
+- **Final newline**: Sempre adicionar
+
+### Padrões de Markdown
+
+**CRITICAL**: Linha em branco após qualquer header (###, ##, #)
+
+```markdown
+### ✅ Correto
+
+Conteúdo aqui.
+
+### ❌ Incorreto
+Conteúdo aqui.
+```
+
+### Assinatura
+
+Ao criar arquivos de documentação, inclua:
+
+```
+Author: MELLØ // POST-HUMAN
+
+This project follows my personal working standards.
+Changes are allowed, inconsistency is not.
+```
+
+### Referências
+
+- Ver `standards/markdown.rules.md` para regras completas de Markdown
+- Ver `standards/README.md` para padrões de trabalho
+- Ver `.markdown-style-guide.md` para guia completo

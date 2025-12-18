@@ -1,29 +1,63 @@
-# Markdown Rules
+<!-- markdown rules -->
 
-## Critical Rule
+## Regras de Markdown - NEØ Dev
 
-**ALWAYS add a blank line after any header** (###, ##, #) before content.
+### Regra Principal: Linha em Branco Após Headers
 
-### ✅ Correct
+**SEMPRE adicione uma linha em branco após qualquer título** (###, ##, #) antes de iniciar o conteúdo.
 
-```markdown
-### Title
-
-Content here.
-```
-
-### ❌ Incorrect
+#### ✅ Correto
 
 ```markdown
-### Title
-Content here.
+### 1. **Título da Seção** ✅ STATUS
+
+- **Campo**: Valor
+- **Outro campo**: Outro valor
 ```
 
-## Formatting
+#### ❌ Incorreto
 
-- Headers: Always followed by blank line
-- Lists: Use `-` for unordered, numbers for ordered
-- Code: Use backticks for inline, code blocks for multi-line
-- Emphasis: `**bold**` for strong, `*italic*` for emphasis
-- Indentation: 2 spaces
+```markdown
+### 1. **Título da Seção** ✅ STATUS
+- **Campo**: Valor
+- **Outro campo**: Outro valor
+```
 
+### Padrões de Formatação
+
+#### Títulos
+
+- Use `#` para título principal (H1)
+- Use `##` para seções principais (H2)
+- Use `###` para subseções (H3)
+- Use `####` para sub-subseções (H4)
+
+**Sempre adicione uma linha em branco após o título antes do conteúdo.**
+
+#### Listas
+
+- Use `-` para listas não ordenadas
+- Use `1.`, `2.`, etc. para listas ordenadas
+- Indente com 2 espaços para subitens
+
+#### Código
+
+- Use \`backticks\` para código inline
+- Use blocos de código com \`\`\` para blocos
+- Sempre especifique a linguagem quando possível
+
+#### Ênfase
+
+- Use `**negrito**` para destaque
+- Use `*itálico*` para ênfase suave
+- Use `~~riscado~~` para texto descontinuado
+
+### Configurações do Projeto
+
+Este projeto usa:
+
+- **EditorConfig** (`.editorconfig`) - Configurações do editor
+- **Prettier** (`.prettierrc.json`) - Formatação automática
+- **Markdownlint** (`.markdownlint.json`) - Validação de estilo
+
+Ver `.markdown-style-guide.md` para guia completo.
