@@ -1,34 +1,46 @@
-# Project Name
+# NEØ // DEV FIELD
 
-Brief description of what this project does.
+`active node: mellø`
 
-## Getting Started
+This is not a repo.  
+This is a **cognitive dev surface**.
 
-```bash
-# Install dependencies
-npm install
-
-# Run
-npm start
-```
-
-## Structure
-
-```
-project/
-├── src/          # Source code
-├── docs/         # Documentation
-└── tests/        # Tests
-```
-
-## License
-
-MIT
+A living space for NEØ modules, protocols and experimental agents.  
+Every new execution starts here.
 
 ---
 
-Author: MELLØ // POST-HUMAN
+## CORE LINKS
 
-This project follows my personal working standards.
-Changes are allowed, inconsistency is not.
+→ Template Engine  
+https://github.com/neomello/neo-template
 
+→ Modules in Play  
+`/projects/` — active.
+
+---
+
+## SYSTEM SIGNAL
+
+```
+
+C:\NEO> run node --MELLO
+
+> _ intent locked
+> _ syncing creative memory
+> _ launching async execution
+
+[dev field online]
+
+```
+
+---
+
+## NOTES
+
+- No instructions.  
+- No boilerplate.  
+- Just pattern recognition.
+
+If you're here, you already know what to do.
+a gente pense agora no conteúdo interno do `/projects/` e como estruturar isso como um grafo de agentes?
