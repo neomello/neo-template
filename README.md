@@ -1,12 +1,9 @@
-# NEØ // DEV FIELD
+# NEØ // NODE DEV 
 
-`active node: mellø`
+`active node: MELLØ`
 
 This is not a repo.  
 This is a **cognitive dev surface**.
-
-A living space for NEØ modules, protocols and experimental agents.  
-Every new execution starts here.
 
 ---
 
@@ -16,7 +13,7 @@ Every new execution starts here.
 https://github.com/neomello/neo-template
 
 → Modules in Play  
-`/projects/` — active.
+`/stantards/` — check.
 
 ---
 
@@ -30,17 +27,9 @@ C:\NEO> run node --MELLO
 > _ syncing creative memory
 > _ launching async execution
 
-[dev field online]
-
 ```
 
 ---
 
-## NOTES
+[dev field online]
 
-- No instructions.  
-- No boilerplate.  
-- Just pattern recognition.
-
-If you're here, you already know what to do.
-a gente pense agora no conteúdo interno do `/projects/` e como estruturar isso como um grafo de agentes?
