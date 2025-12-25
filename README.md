@@ -20,13 +20,16 @@ https://github.com/neomello/neo-template
 ## SYSTEM SIGNAL
 
 ```
-
-C:\NEO> run node --MELLO
-
-> _ intent locked
-> _ syncing creative memory
-> _ launching async execution
-
+timeline
+    title SYSTEM SIGNAL
+    section C:\NEO\
+        run node --MELLO : Launch command
+    section Process
+        intent locked : Authentication
+        syncing creative memory : Data load
+        launching async execution : Execution start
+    section Status
+        [dev field online] : System ready
 ```
 
 ---
