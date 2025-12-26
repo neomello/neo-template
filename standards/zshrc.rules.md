@@ -5,7 +5,48 @@
 > **⚠️ IMPORTANTE**: Nunca versionar API keys ou secrets no .zshrc!
 > Use arquivo separado `~/.zshrc.secrets` (não versionado).
 
-### Estrutura Recomendada
+### .zshrc.secrets - Organização com Comentários
+
+O arquivo `~/.zshrc.secrets` **pode e deve** usar comentários para organização:
+
+```bash
+# =====================================================
+# .zshrc.secrets - API Keys e Tokens
+# =====================================================
+# ⚠️ CRÍTICO: NUNCA versione este arquivo no Git!
+# Adicione ao .gitignore: echo ".zshrc.secrets" >> ~/.gitignore
+# =====================================================
+
+# ===================================
+# THIRDWEB
+# ===================================
+# Descrição: API key para serviços thirdweb
+# Criado em: 2025-12-26
+export THIRDWEB_SECRET_KEY="..."
+
+# ===================================
+# OPENAI
+# ===================================
+# Descrição: API key para OpenAI (ChatGPT, etc)
+# Criado em: 2025-12-26
+# export OPENAI_API_KEY="sk-..."
+
+# ===================================
+# GITHUB
+# ===================================
+# Descrição: Personal Access Token para GitHub
+# Criado em: 2025-12-26
+# export GITHUB_PAT="ghp_..."
+```
+
+**Benefícios dos comentários:**
+
+-  Organização por seções (separadores visuais)
+-  Documentação de cada API key (descrição, data)
+-  Avisos de segurança (nunca versionar)
+-  Facilita manutenção e identificação de keys
+
+### Estrutura Recomendada do .zshrc
 
 ```bash
 # 1. Homebrew
@@ -19,20 +60,15 @@ export NVM_DIR="$HOME/.nvm"
 alias python="python3"
 alias ll="ls -la"
 
-# 4. Paths customizados
-export PATH="$PATH:/caminho/customizado"
-
-# 5. Configurações de ferramentas
-export OLLAMA_MODELS=/Users/nettomello/ollama
 ```
 
 ### Boas Práticas
 
-- **Comentários**: Sempre comente seções importantes
-- **Organização**: Agrupe por categoria (brew, nvm, aliases, paths)
-- **Versionamento**: Mantenha backup do .zshrc
-- **Aliases**: Use nomes descritivos e curtos
-- **Paths**: Adicione paths customizados no final
+-  **Comentários**: Sempre comente seções importantes
+-  **Organização**: Agrupe por categoria (brew, nvm, aliases, paths)
+-  **Versionamento**: Mantenha backup do .zshrc
+-  **Aliases**: Use nomes descritivos e curtos
+-  **Paths**: Adicione paths customizados no final
 
 ### Aliases Úteis para Dev
 
@@ -55,10 +91,11 @@ alias dcd='docker-compose down'
 ### Funções Úteis
 
 ```bash
-# Função para abrir projeto no Scalar
-scalar-api() {
-  cd ~/CODIGOS/neo-dev/projects/scalar-api-starter
-  npm run "$@"
-}
+# Adicione funções personalizadas conforme necessário
+# Exemplo:
+# my-project() {
+#   cd ~/CODIGOS/meu-projeto
+#   npm run "$@"
+# }
 ```
 

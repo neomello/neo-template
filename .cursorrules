@@ -5,16 +5,18 @@ These rules are authoritative.
 
 ## Critical Rules
 
-- ALWAYS add a blank line after any Markdown header.
-- Use 2 spaces for indentation.
-- Remove trailing whitespace and add final newline.
+-  ALWAYS add a blank line after any Markdown header.
+-  Use 2 spaces for indentation.
+-  Remove trailing whitespace and add final newline.
 
 ## References (consult when needed)
 
-- Work standards: `standards/README.md`
-- Markdown rules: `standards/markdown.rules.md`
-- AI behavior rules: `standards/ai.rules.md`
-- README template: `standards/readme.template.md`
-- Signature: `standards/readme.signature.md`
-- Links: `standards/links.md`
-
+-  Work standards: `standards/README.md`
+-  Workflow protocol: `standards/WORKFLOW.md` (resumo) / `neomello-workflow.md` (completo)
+-  Markdown rules: `standards/markdown.rules.md`
+-  AI behavior rules: `standards/ai.rules.md`
+-  README template: `standards/readme.template.md`
+-  Signature (projetos/READMEs): `standards/readme.signature.md`
+-  Signature (contratos/tokens): `standards/readme.signature.contracts.md`
+-  Contract template: `standards/contract.template.sol`
+-  Links: `standards/links.md`

@@ -1,0 +1,125 @@
+# Extensões Cursor/VS Code - NEØ Dev Workspace
+# Total: 47 extensões ativas (9 removidas: Java, Django, Deno)
+# Última atualização: 2025-12-26
+#
+# Para instalar todas:
+# cat extensions.txt | xargs -L 1 cursor --install-extension
+# ou
+# cat extensions.txt | xargs -L 1 code --install-extension
+
+# =====================================================
+# CORE / ESSENCIAIS
+# =====================================================
+anysphere.cursorpyright
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+ms-vscode.vscode-typescript-next
+
+# =====================================================
+# GIT / VERSIONAMENTO
+# =====================================================
+donjayamanne.githistory
+eamodio.gitlens
+github.vscode-pull-request-github
+pflannery.vscode-versionlens
+
+# =====================================================
+# PYTHON
+# =====================================================
+# batisteo.vscode-django  # REMOVIDO - não utilizado
+donjayamanne.python-environment-manager
+donjayamanne.python-extension-pack
+kevinrose.vsc-python-indent
+ms-python.black-formatter
+ms-python.debugpy
+ms-python.flake8
+ms-python.pylint
+ms-python.python
+ms-python.vscode-python-envs
+njpwerner.autodocstring
+
+# =====================================================
+# JAVASCRIPT / TYPESCRIPT / NODE
+# =====================================================
+christian-kohler.npm-intellisense
+christian-kohler.path-intellisense
+# denoland.vscode-deno  # REMOVIDO - não utilizado
+rvest.vs-code-prettier-eslint
+
+# =====================================================
+# WEB / FRONTEND
+# =====================================================
+bradlc.vscode-tailwindcss
+ecmel.vscode-html-css
+ritwickdey.liveserver
+vue.volar
+
+# =====================================================
+# MARKDOWN / DOCUMENTAÇÃO
+# =====================================================
+davidanson.vscode-markdownlint
+
+# =====================================================
+# DOCKER / CONTAINERS
+# =====================================================
+anysphere.remote-containers
+ms-azuretools.vscode-containers
+ms-azuretools.vscode-docker
+
+# =====================================================
+# JUPYTER NOTEBOOKS
+# =====================================================
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
+
+# =====================================================
+# JAVA (REMOVIDO - não utilizado)
+# =====================================================
+# redhat.java
+# vscjava.vscode-gradle
+# vscjava.vscode-java-debug
+# vscjava.vscode-java-dependency
+# vscjava.vscode-java-pack
+# vscjava.vscode-java-test
+# vscjava.vscode-maven
+
+# =====================================================
+# MOBILE / REACT NATIVE
+# =====================================================
+msjsdiag.vscode-react-native
+
+# =====================================================
+# TEMPLATES / SNIPPETS
+# =====================================================
+wscats.omi-snippets
+wholroyd.jinja
+
+# =====================================================
+# DADOS / CSV
+# =====================================================
+mechatroner.rainbow-csv
+
+# =====================================================
+# BUILD / MAKE
+# =====================================================
+ms-vscode.makefile-tools
+
+# =====================================================
+# GITHUB / CI/CD
+# =====================================================
+github.github-vscode-theme
+github.vscode-github-actions
+
+# =====================================================
+# AI / ASSISTENTES
+# =====================================================
+kodu-ai.claude-dev-experimental
+
+# =====================================================
+# BROWSER / DEVTOOLS
+# =====================================================
+ms-edgedevtools.vscode-edge-devtools
+
