@@ -84,7 +84,7 @@ A IA seguirá automaticamente:
 Este template segue o **NEØ Workflow Protocol**. Consulte:
 
 -  **Resumo:** `standards/WORKFLOW.md`
--  **Completo:** https://github.com/neomello/neo-dev/blob/main/neomello-workflow.md
+-  **Completo:** <https://github.com/neomello/neo-dev/blob/main/neomello-workflow.md>
 
 ---
 
@@ -92,7 +92,7 @@ Este template segue o **NEØ Workflow Protocol**. Consulte:
 
 Para documentação completa dos padrões, consulte:
 
--  **Workspace completo:** https://github.com/neomello/neo-dev
+-  **Workspace completo:** <https://github.com/neomello/neo-dev>
 -  **Padrões:** `standards/README.md`
 -  **Como Cursor lê:** `standards/HOW_CURSOR_READS.md`
 
