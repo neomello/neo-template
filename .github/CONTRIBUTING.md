@@ -1,135 +1,139 @@
-# Contribuindo para este projeto
+# Contributing
 
-Obrigado por considerar contribuir! Este documento fornece diretrizes e padrões para contribuições.
+Thank you for considering contributing to this project! This document provides guidelines and standards for contributions.
 
-## Código de Conduta
+<iframe src="https://github.com/sponsors/neomello/card" title="Sponsor neomello" height="225" width="600" style="border: 0;"></iframe>
 
-Este projeto segue os padrões NEØ de desenvolvimento. Por favor, mantenha um ambiente respeitoso e profissional em todas as interações.
+## Code of Conduct
 
-## Processo de Desenvolvimento
+This project follows NEØ development standards. Please maintain a respectful and professional environment in all interactions.
 
-Este projeto usa um modelo de branching baseado em `main` alinhado com práticas DevSecOps modernas.
+## Development Process
 
-- Todas as novas features e correções são mergeadas na branch `main` via Pull Request
-- Use branches descritivas para features (`feature/nome-da-feature`)
-- Use branches para experimentos (`experiment/nome`)
+This project uses a `main`-based branching model aligned with modern DevSecOps practices.
 
-## Como Contribuir
+-  All new features and fixes are merged into the `main` branch via Pull Request
+-  Use descriptive branches for features (`feature/feature-name`)
+-  Use branches for experiments (`experiment/name`)
 
-### 1. Fork e Clone
+## How to Contribute
 
-1. Faça fork do repositório
-2. Clone seu fork
-3. Adicione o upstream: `git remote add upstream <url-do-repo-original>`
+### 1. Fork and Clone
 
-### 2. Criar Branch
+1.  Fork the repository
+2.  Clone your fork
+3.  Add upstream: `git remote add upstream <original-repo-url>`
+
+### 2. Create Branch
 
 ```bash
-git checkout -b feature/nome-da-feature
-# ou
-git checkout -b fix/descricao-do-bug
+git checkout -b feature/feature-name
+# or
+git checkout -b fix/bug-description
 ```
 
-### 3. Desenvolvimento
+### 3. Development
 
-- **Sempre** siga os padrões de código estabelecidos
-- **Sempre** adicione testes se estiver adicionando nova funcionalidade
-- **Nunca** commite credenciais ou chaves privadas
-- **Sempre** verifique segurança antes de commitar
+-  **Always** follow established code standards
+-  **Always** add tests if adding new functionality
+-  **Never** commit credentials or private keys
+-  **Always** verify security before committing
 
 ### 4. Commit
 
-- Use mensagens de commit descritivas
-- Siga o padrão: `tipo: descrição breve`
-- Exemplos:
-  - `feat: adiciona nova funcionalidade`
-  - `fix: corrige bug específico`
-  - `docs: atualiza documentação`
+-  Use descriptive commit messages
+-  Follow the pattern: `type: brief description`
+-  Examples:
+  -  `feat: add new feature`
+  -  `fix: fix specific bug`
+  -  `docs: update documentation`
 
 ### 5. Pull Request
 
-1. Certifique-se de que todos os testes passam
-2. Atualize a documentação se necessário
-3. Descreva claramente as mudanças no PR
-4. Referencie issues relacionadas se aplicável
+1.  Ensure all tests pass
+2.  Update documentation if necessary
+3.  Clearly describe changes in the PR
+4.  Reference related issues if applicable
 
-## Padrões de Código
+## Code Standards
 
-### Formatação
+### Formatting
 
-- Use 2 espaços para indentação (conforme `.editorconfig`)
-- Use 4 espaços para Python/Solidity
-- **SEMPRE** adicione linha em branco após headers Markdown
-- Remova trailing whitespace
-- Adicione newline final
+-  Use 2 spaces for indentation (as per `.editorconfig`)
+-  Use 4 spaces for Python/Solidity
+-  **ALWAYS** add blank line after Markdown headers
+-  Remove trailing whitespace
+-  Add final newline
 
-### Segurança
+### Security
 
-- **NUNCA** commite arquivos `.env`, `.key`, `.secret`
-- **NUNCA** exponha chaves privadas ou credenciais
-- **SEMPRE** use variáveis de ambiente para configurações sensíveis
-- **SEMPRE** verifique segurança antes de commitar
+-  **NEVER** commit `.env`, `.key`, `.secret` files
+-  **NEVER** expose private keys or credentials
+-  **ALWAYS** use environment variables for sensitive configurations
+-  **ALWAYS** verify security before committing
 
-### Blockchain/Solidity/IA
+### Blockchain/Solidity/AI
 
-- **Contratos Solidity**: Sempre mantenha backups antes de modificar
-- **Chaves Privadas**: NUNCA armazene em código ou arquivos versionados
-- **Modelos de IA**: Proteja arquivos de modelo grandes
-- **Scripts de Deploy**: Verifique sempre antes de executar em produção
+-  **Solidity Contracts**: Always maintain backups before modifying
+-  **Private Keys**: NEVER store in code or versioned files
+-  **AI Models**: Protect large model files
+-  **Deploy Scripts**: Always verify before executing in production
 
-## Estrutura do Projeto
+## Project Structure
 
-⚠️ **ESTRUTURA PROTEGIDA POR ARQUITETURA NEØ**
+**STRUCTURE PROTECTED BY NEØ ARCHITECTURE**
 
-Consulte `.cursorrules` para estrutura protegida do projeto.
+Consult `.cursorrules` for the protected project structure.
 
-**NUNCA** modifique pastas ou renomeie arquivos sem autorização.
+**NEVER** modify folders or rename files without authorization.
 
-## Verificações Antes de Commitar
+## Pre-Commit Checks
 
-Execute estas verificações antes de fazer commit:
+Run these checks before committing:
 
 ```bash
-# Verificar status do git
+# Check git status
 git status
 
-# Verificar mudanças
+# Check changes
 git diff
 
-# Verificar segurança (se disponível)
+# Check security (if available)
 make check-security
 ```
 
-## Checklist de Pull Request
+## Pull Request Checklist
 
-- [ ] Código segue os padrões estabelecidos
-- [ ] Testes passam (se aplicável)
-- [ ] Documentação atualizada
-- [ ] Nenhuma credencial ou chave privada exposta
-- [ ] Mensagens de commit descritivas
-- [ ] Formatação correta (linha em branco após headers)
+-  [ ] Code follows established standards
+-  [ ] Tests pass (if applicable)
+-  [ ] Documentation updated
+-  [ ] No credentials or private keys exposed
+-  [ ] Descriptive commit messages
+-  [ ] Correct formatting (blank line after headers)
 
-## Reportar Problemas
+## Reporting Issues
 
-Use GitHub Issues para reportar bugs ou sugerir features:
+Use GitHub Issues to report bugs or suggest features:
 
-- Use títulos descritivos
-- Forneça passos para reproduzir (se bug)
-- Inclua informações do ambiente quando relevante
-- Seja claro e objetivo
+-  Use descriptive titles
+-  Provide steps to reproduce (if bug)
+-  Include environment information when relevant
+-  Be clear and objective
 
-## Perguntas?
+## Questions?
 
-Se tiver dúvidas sobre como contribuir, abra uma issue ou entre em contato com os mantenedores.
+If you have questions about how to contribute, open an issue or contact the maintainers.
 
-## Licença
+## License
 
-Ao contribuir, você concorda que suas contribuições serão licenciadas sob a mesma licença do projeto.
+By contributing, you agree that your contributions will be licensed under the same license as the project.
 
 ---
 
+<iframe src="https://github.com/sponsors/neomello/button" title="Sponsor neomello" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+
 **Author:** MELLØ // NEØ DEV
 
-Este projeto segue padrões NEØ de desenvolvimento.
-Mudanças são permitidas, inconsistência não é.
+This project follows NEØ development standards.
+Changes are allowed, inconsistency is not.
 
