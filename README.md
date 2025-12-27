@@ -6,7 +6,7 @@ Work must survive failure.
 
 This repository is not a personal setup. It is a **replicable template** designed to be forked, adapted and maintained as a long-living development workspace.
 
-<iframe src="https://github.com/sponsors/neomello/card" title="Sponsor neomello" height="225" width="600" style="border:0;"></iframe>
+[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=for-the-badge\&logo=githubsponsors\&logoColor=white)](https://github.com/sponsors/neomello)
 
 ---
 
@@ -69,7 +69,7 @@ You are sponsoring a **pattern**.
 
 If this template saved you time, prevented loss, or clarified your workflow, sponsorship is simply returning value to the system.
 
-<iframe src="https://github.com/sponsors/neomello/button" title="Sponsor neomello" height="32" width="114" style="border:0;border-radius:6px;"></iframe>
+[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=for-the-badge\&logo=githubsponsors\&logoColor=white)](https://github.com/sponsors/neomello)
 
 ---
 
