@@ -1,0 +1,7 @@
+# Git Attributes
+# Configure file handling for Git
+
+# Template files - these contain placeholders, not real secrets
+*.template linguist-generated=false
+mcp-servers.json.template linguist-generated=false
+
