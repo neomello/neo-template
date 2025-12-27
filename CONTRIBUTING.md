@@ -44,9 +44,9 @@ git checkout -b fix/bug-description
 -  Use descriptive commit messages
 -  Follow the pattern: `type: brief description`
 -  Examples:
-  -  `feat: add new feature`
-  -  `fix: fix specific bug`
-  -  `docs: update documentation`
+-  `feat: add new feature`
+-  `fix: fix specific bug`
+-  `docs: update documentation`
 
 ### 5. Pull Request
 
@@ -81,7 +81,9 @@ git checkout -b fix/bug-description
 
 ## Project Structure
 
-**STRUCTURE PROTECTED BY NEØ ARCHITECTURE**
+### Protected Architecture
+
+STRUCTURE PROTECTED BY NEØ ARCHITECTURE
 
 Consult `.cursorrules` for the protected project structure.
 
