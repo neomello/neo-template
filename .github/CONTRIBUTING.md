@@ -1,135 +1,219 @@
-# Contribuindo para este projeto
+# Contributing to this project
 
-Obrigado por considerar contribuir! Este documento fornece diretrizes e padrões para contribuições.
+Thank you for considering a contribution.
 
-## Código de Conduta
+This project does not accept ad-hoc changes. It accepts **intentional contributions** aligned with the architecture, standards, and long-term continuity of the system.
 
-Este projeto segue os padrões NEØ de desenvolvimento. Por favor, mantenha um ambiente respeitoso e profissional em todas as interações.
-
-## Processo de Desenvolvimento
-
-Este projeto usa um modelo de branching baseado em `main` alinhado com práticas DevSecOps modernas.
-
-- Todas as novas features e correções são mergeadas na branch `main` via Pull Request
-- Use branches descritivas para features (`feature/nome-da-feature`)
-- Use branches para experimentos (`experiment/nome`)
-
-## Como Contribuir
-
-### 1. Fork e Clone
-
-1. Faça fork do repositório
-2. Clone seu fork
-3. Adicione o upstream: `git remote add upstream <url-do-repo-original>`
-
-### 2. Criar Branch
-
-```bash
-git checkout -b feature/nome-da-feature
-# ou
-git checkout -b fix/descricao-do-bug
-```
-
-### 3. Desenvolvimento
-
-- **Sempre** siga os padrões de código estabelecidos
-- **Sempre** adicione testes se estiver adicionando nova funcionalidade
-- **Nunca** commite credenciais ou chaves privadas
-- **Sempre** verifique segurança antes de commitar
-
-### 4. Commit
-
-- Use mensagens de commit descritivas
-- Siga o padrão: `tipo: descrição breve`
-- Exemplos:
-  - `feat: adiciona nova funcionalidade`
-  - `fix: corrige bug específico`
-  - `docs: atualiza documentação`
-
-### 5. Pull Request
-
-1. Certifique-se de que todos os testes passam
-2. Atualize a documentação se necessário
-3. Descreva claramente as mudanças no PR
-4. Referencie issues relacionadas se aplicável
-
-## Padrões de Código
-
-### Formatação
-
-- Use 2 espaços para indentação (conforme `.editorconfig`)
-- Use 4 espaços para Python/Solidity
-- **SEMPRE** adicione linha em branco após headers Markdown
-- Remova trailing whitespace
-- Adicione newline final
-
-### Segurança
-
-- **NUNCA** commite arquivos `.env`, `.key`, `.secret`
-- **NUNCA** exponha chaves privadas ou credenciais
-- **SEMPRE** use variáveis de ambiente para configurações sensíveis
-- **SEMPRE** verifique segurança antes de commitar
-
-### Blockchain/Solidity/IA
-
-- **Contratos Solidity**: Sempre mantenha backups antes de modificar
-- **Chaves Privadas**: NUNCA armazene em código ou arquivos versionados
-- **Modelos de IA**: Proteja arquivos de modelo grandes
-- **Scripts de Deploy**: Verifique sempre antes de executar em produção
-
-## Estrutura do Projeto
-
-⚠️ **ESTRUTURA PROTEGIDA POR ARQUITETURA NEØ**
-
-Consulte `.cursorrules` para estrutura protegida do projeto.
-
-**NUNCA** modifique pastas ou renomeie arquivos sem autorização.
-
-## Verificações Antes de Commitar
-
-Execute estas verificações antes de fazer commit:
-
-```bash
-# Verificar status do git
-git status
-
-# Verificar mudanças
-git diff
-
-# Verificar segurança (se disponível)
-make check-security
-```
-
-## Checklist de Pull Request
-
-- [ ] Código segue os padrões estabelecidos
-- [ ] Testes passam (se aplicável)
-- [ ] Documentação atualizada
-- [ ] Nenhuma credencial ou chave privada exposta
-- [ ] Mensagens de commit descritivas
-- [ ] Formatação correta (linha em branco após headers)
-
-## Reportar Problemas
-
-Use GitHub Issues para reportar bugs ou sugerir features:
-
-- Use títulos descritivos
-- Forneça passos para reproduzir (se bug)
-- Inclua informações do ambiente quando relevante
-- Seja claro e objetivo
-
-## Perguntas?
-
-Se tiver dúvidas sobre como contribuir, abra uma issue ou entre em contato com os mantenedores.
-
-## Licença
-
-Ao contribuir, você concorda que suas contribuições serão licenciadas sob a mesma licença do projeto.
+Contributing here means preserving predictability, security, and recoverability.
 
 ---
 
-**Author:** MELLØ // NEØ DEV
+## Code of Conduct
 
-Este projeto segue padrões NEØ de desenvolvimento.
-Mudanças são permitidas, inconsistência não é.
+This project follows **NEØ development standards**.
 
+That implies:
+
+* Respectful and objective communication
+* Technical discussions grounded in evidence
+* Zero tolerance for hostile or careless behavior
+
+High-reliability systems require professional posture.
+
+---
+
+## Development Model
+
+This repository uses a **main-first** workflow aligned with modern DevSecOps practices.
+
+Principles:
+
+* `main` always represents a recoverable state
+* No direct commits to `main`
+* All changes enter via Pull Request
+
+### Branching Strategy
+
+* `feature/short-description` for new functionality
+* `fix/short-description` for bug fixes
+* `experiment/name` for experiments and proofs of concept
+
+Long-lived branches are discouraged.
+
+---
+
+## How to Contribute
+
+### 1. Fork and Clone
+
+1. Fork the repository
+2. Clone your fork locally
+3. Add the upstream remote:
+
+```bash
+git remote add upstream https://github.com/neomello/neo-template
+```
+
+---
+
+### 2. Create a Branch
+
+```bash
+git checkout -b feature/short-description
+# or
+git checkout -b fix/short-description
+```
+
+---
+
+### 3. Development Guidelines
+
+Non-negotiable rules:
+
+* **Always** follow the standards defined in `standards/`
+* **Always** add tests when introducing new functionality
+* **Never** commit credentials, private keys, or secrets
+* **Always** assess security impact before committing
+
+If something is not documented, assume it must not be changed.
+
+---
+
+### 4. Commits
+
+Commits must be clear, small, and traceable.
+
+Format:
+
+```
+type: concise description
+```
+
+Accepted types:
+
+* `feat:` new functionality
+* `fix:` bug fix
+* `docs:` documentation
+* `refactor:` refactoring without behavior change
+* `chore:` maintenance tasks
+
+Examples:
+
+* `feat: add recovery script`
+* `fix: correct input validation`
+* `docs: clarify security guidelines`
+
+---
+
+### 5. Pull Requests
+
+Before opening a PR:
+
+1. Ensure all tests pass
+2. Update relevant documentation
+3. Clearly explain **what changed** and **why**
+4. Reference related issues if applicable
+
+PRs without context will not be merged.
+
+---
+
+## Technical Standards
+
+### Formatting
+
+* Indentation follows `.editorconfig`
+* Python and Solidity use 4 spaces
+* Markdown requires a blank line after headers
+* No trailing whitespace
+* Always include a final newline
+
+---
+
+### Security
+
+* **Never** commit `.env`, `.key`, `.secret` files
+* **Never** expose private keys or credentials
+* **Always** use environment variables for sensitive configuration
+* **Always** review diffs with a security mindset
+
+Security is not a final step. It is a prerequisite.
+
+---
+
+### Blockchain, Smart Contracts, and AI
+
+* Smart contracts must be backed up before modification
+* Private keys must never appear in code or versioned files
+* Large AI models should be treated as external artifacts
+* Deployment scripts must be reviewed carefully before execution
+
+Mistakes here are incidents, not bugs.
+
+---
+
+## Project Structure
+
+⚠️ **STRUCTURE PROTECTED BY NEØ ARCHITECTURE**
+
+The project layout is intentional.
+
+* Review `.cursorrules`
+* Do not rename or move structural directories
+* Do not alter core files without architectural justification
+
+Structural changes require consensus.
+
+---
+
+## Pre-Commit Checks
+
+Run before committing:
+
+```bash
+git status
+git diff
+make check-security  # if available
+```
+
+Rushed commits create structural debt.
+
+---
+
+## Pull Request Checklist
+
+* [ ] Code follows established standards
+* [ ] Tests pass (when applicable)
+* [ ] Documentation updated
+* [ ] No credentials exposed
+* [ ] Commits are clear and scoped
+* [ ] Formatting is consistent
+
+---
+
+## Reporting Issues
+
+Use GitHub Issues.
+
+Good issues include:
+
+* Clear title
+* Re show steps when reporting bugs
+* Relevant environment context
+* Concise description
+
+Vague issues slow the system down.
+
+---
+
+## License
+
+By contributing, you agree that your contributions will be licensed under the same license as this project.
+
+---
+
+**Author:** MELLØ
+**Protocol:** NEØ
+
+Change is allowed.
+Inconsistency is not.
