@@ -1,130 +1,88 @@
-# NEØ Template
+# NEØ — Dev Workspace
 
-Template base para novos projetos seguindo os padrões **NEØ Protocol**.
+**A template-based continuity system for development.**
 
-**Última atualização:** 2025-12-25
+Work must survive failure.
+
+This repository is not a personal setup. It is a **replicable template** designed to be forked, adapted and maintained as a long-living development workspace.
+
+[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=for-the-badge\&logo=githubsponsors\&logoColor=white)](https://github.com/sponsors/neomello)
 
 ---
 
-## Uso
+## Why this exists
 
-### Criar Novo Projeto a partir deste Template
+Most development environments are fragile, implicit and impossible to rebuild.
 
-1.  Use este repositório como template no GitHub
-2.  Ou clone e renomeie:
+NEØ Dev Workspace exists to enforce one idea:
+**your environment must be recoverable, deterministic and portable**.
+
+If a machine disappears, context does not.
+
+---
+
+## What you get
+
+* Codified standards for shell, markdown and AI behavior
+* Automated installation and recovery
+* A clean structure for active projects
+* A reproducible environment that can be rebuilt from zero
+
+This repository does not document the environment.
+It **recreates** it.
+
+---
+
+## Quick Start
 
 ```bash
-git clone https://github.com/neomello/neo-template.git meu-projeto
-cd meu-projeto
-rm -rf .git
-git init
+cd ~/CODIGOS
+git clone https://github.com/neomello/neo-template neo-dev
+cd neo-dev
+chmod +x scripts/install.sh
+./scripts/install.sh
 ```
 
-### Aplicar Padrões
+Secrets are externalized by design:
 
-Este template já inclui todos os padrões globais em `standards/`:
-
--  **Markdown** - Regras de formatação
--  **IA/Cursor** - Regras para assistentes
--  **Templates** - README e contratos Solidity
--  **Assinaturas** - Padrões de assinatura para projetos e contratos
-
-O Cursor aplica automaticamente via `.cursorrules`.
-
----
-
-## Estrutura
-
-```text
-projeto/
-├── .cursorrules              # Regras do Cursor (lê automaticamente)
-├── standards/                # Padrões globais NEØ
-│   ├── README.md             # Índice completo
-│   ├── WORKFLOW.md           # Resumo do workflow protocol
-│   ├── ai.rules.md           # Regras para IA
-│   ├── markdown.rules.md     # Regras Markdown
-│   ├── readme.template.md    # Template README
-│   ├── readme.signature.md   # Assinatura projetos
-│   ├── readme.signature.contracts.md # Assinatura contratos
-│   ├── contract.template.sol # Template Solidity
-│   └── ...
-└── README.md                 # Este arquivo
+```bash
+cursor ~/.zshrc.secrets
+source ~/.zshrc
 ```
 
----
-
-## Padrões Incluídos
-
-### Para READMEs
-
-1.  Consulte `standards/readme.template.md` para estrutura
-2.  Adicione assinatura de `standards/readme.signature.md` no final
-3.  Siga regras em `standards/markdown.rules.md`
-
-### Para Contratos Solidity
-
-1.  Use `standards/contract.template.sol` como base
-2.  Siga padrão em `standards/readme.signature.contracts.md`
-3.  Use `MELLO` (sem Ø) em comentários para compatibilidade
-
-### Via Cursor/IA
-
-O Cursor lê automaticamente `.cursorrules` que referencia todos os padrões.
-
-A IA seguirá automaticamente:
-
--  Regras de Markdown
--  Padrões de código
--  Templates e assinaturas
+New machine. Same context.
 
 ---
 
-## Workflow Protocol
+## Why sponsor this
 
-Este template segue o **NEØ Workflow Protocol**. Consulte:
+This work is public, but it is not free.
 
--  **Resumo:** `standards/WORKFLOW.md`
--  **Completo:** <https://github.com/neomello/neo-dev/blob/main/neomello-workflow.md>
+Sponsoring means supporting:
 
----
+* Reproducible development environments
+* Failure-resistant workflows
+* Infrastructure that outlives hardware
 
-## Documentação Completa
+You are not sponsoring a person.
+You are sponsoring a **pattern**.
 
-Para documentação completa dos padrões, consulte:
+If this template saved you time, prevented loss, or clarified your workflow, sponsorship is simply returning value to the system.
 
--  **Workspace completo:** <https://github.com/neomello/neo-dev>
--  **Padrões:** `standards/README.md`
--  **Como Cursor lê:** `standards/HOW_CURSOR_READS.md`
-
----
-
-## Próximos Passos
-
-1.  Renomeie este projeto
-2.  Atualize o README com informações do seu projeto
-3.  Use os templates em `standards/` para criar arquivos
-4.  O Cursor aplicará automaticamente os padrões
+[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=for-the-badge\&logo=githubsponsors\&logoColor=white)](https://github.com/sponsors/neomello)
 
 ---
 
-## Contact
+## Repository
 
-[neo@neoprotocol.space](mailto:neo@neoprotocol.space)
+[https://github.com/neomello/neo-template](https://github.com/neomello/neo-template)
 
-</div>
+---
 
-<div align="center">
-  <a href="https://x.com/node_mello">
-    <img src="https://img.shields.io/badge/-@node_mello-ff008e?style=flat-square&logo=twitter&logoColor=white" alt="Twitter @node_mello" />
-  </a>
-  <a href="https://www.instagram.com/neoprotocol.eth/">
-    <img src="https://img.shields.io/badge/-@neoprotocol.eth-ff008e?style=flat-square&logo=instagram&logoColor=white" alt="Instagram @neoprotocol.eth" />
-  </a>
-  <a href="https://etherscan.io/">
-    <img src="https://img.shields.io/badge/-neomello.eth-ff008e?style=flat-square&logo=ethereum&logoColor=white" alt="Ethereum neomello.eth" />
-  </a>
-</div>
+> Expand until silence becomes structure.
 
-<div align="center">
-  <i>"Expand until silence becomes structure."</i>
-</div>
+**Author:** MELLØ
+**Protocol:** NEØ
+
+This template evolves.
+Inconsistency does not.
