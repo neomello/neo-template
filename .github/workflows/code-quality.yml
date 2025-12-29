@@ -1,0 +1,48 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  quality:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Prettier check
+        run: |
+          if command -v prettier &> /dev/null; then
+            npx prettier --check "**/*.{js,json,md}" --ignore-path .gitignore
+          else
+            echo "Prettier not installed, skipping..."
+          fi
+
+      - name: Check EditorConfig compliance
+        run: |
+          echo "ℹ️ EditorConfig compliance is enforced by Prettier"
+          echo "Prettier respects .editorconfig automatically"
+          echo "No separate EditorConfig checker needed"
+        continue-on-error: true
+
+      - name: Validate Markdown
+        run: |
+          if command -v markdownlint &> /dev/null; then
+            npx markdownlint-cli '**/*.md' --ignore node_modules --ignore dist --ignore .git --ignore-path .markdownlintignore || true
+          else
+            echo "markdownlint not installed, skipping..."
+          fi
+

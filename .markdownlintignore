@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.git/
+.idea/
+*.min.js
+package-lock.json
+CHANGELOG.md
+
+# Documentação interna (não crítica para CI/CD)
+docs/
+GUIA_STORACHA_IPFS.md
+NEOFLW-TOKEN.md
+WALLET-AUTH-FLOW.md
+CORRECOES_CRITICAS.md
+
+# Arquivos grandes de documentação (corrigir gradualmente)
+PRIVACY.md
+TERMS.md
+

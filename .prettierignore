@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.min.js
+
+# Generated files
+*.log
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IPFS/Storacha
+.storacha/
+*.cid
+
+# Public assets (images, etc)
+public/**/*.{png,jpg,jpeg,gif,webp,svg,ico}
+
