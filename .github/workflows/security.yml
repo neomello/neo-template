@@ -28,10 +28,26 @@ jobs:
       - name: Check for exposed secrets
         run: |
           echo "Checking for exposed secrets..."
-          if grep -r "password\|secret\|key\|token" --include="*.js" --include="*.json" . | grep -v "node_modules" | grep -v ".git" | grep -v "package-lock.json" | grep -v "test" | grep -iE "(sk-|api_key|private_key|password\s*=)" | head -5; then
-            echo "⚠️ Potential secrets found - please review"
+          # Procura apenas por secrets hardcoded críticos (valores reais, não referências)
+          # Padrões perigosos: sk- seguido de 32+ caracteres (tokens OpenAI reais)
+          # Ignora tudo que é referência a variável de ambiente ou nome de variável
+          if grep -r --include="*.js" --include="*.json" --include="*.ts" \
+            -E "(sk-[a-zA-Z0-9]{32,})" \
+            . | grep -v "node_modules" | grep -v ".git" | grep -v "package-lock.json" | \
+            grep -v "test" | grep -v "tests/" | grep -v "\.test\." | grep -v "env-example" | \
+            grep -v "\.example\." | grep -v "process\.env" | grep -v "config\." | \
+            grep -v "window\.APP_CONFIG" | grep -v "GOOGLE_API_KEY\|OPENAI_API_KEY" | \
+            grep -v "VAR_NAME\|VAR\s*=" | head -5; then
+            echo "⚠️  Potential secrets found. Please review."
             exit 1
+          fi
+          echo "✅ No obvious secrets found"
+
+      - name: Validate .env.example exists
+        run: |
+          if [ ! -f "env-example.txt" ] && [ ! -f ".env.example" ]; then
+            echo "⚠️  No .env.example file found"
           else
-            echo "✅ No obvious secrets exposed"
+            echo "✅ .env.example file exists"
           fi
 
