@@ -1,0 +1,17 @@
+# Labeler configuration
+# https://github.com/actions/labeler
+
+docs:
+  - 'docs/**'
+  - 'standards/**'
+  - '*.md'
+
+ci:
+  - '.github/workflows/**'
+  - '.github/**'
+
+dependencies:
+  - 'package.json'
+  - 'package-lock.json'
+  - 'requirements.txt'
+  - 'pyproject.toml'
