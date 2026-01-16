@@ -24,8 +24,10 @@ jobs:
         run: |
           if [ -f package-lock.json ]; then
             npm ci
-          else
+          elif [ -f package.json ]; then
             npm install
+          else
+            echo "No package.json found, skipping Node.js dependencies installation"
           fi
 
       - name: Run Prettier check
