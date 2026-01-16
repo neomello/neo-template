@@ -21,7 +21,14 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install
+          else
+            echo "No package.json found, skipping Node.js dependencies installation"
+          fi
 
       - name: Run Prettier check
         run: |
