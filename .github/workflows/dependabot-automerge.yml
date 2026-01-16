@@ -23,4 +23,3 @@ jobs:
         uses: hmarr/auto-approve-action@v2.1.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          allowed-reviewers: dependabot[bot],dependabot

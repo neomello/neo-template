@@ -14,13 +14,18 @@ jobs:
 
       - name: Check for Dockerfile
         run: |
-          if [ ! -f Dockerfile ]; then
-            echo "No Dockerfile found in repository root"
+          if [ -f Dockerfile ]; then
+            echo "DOCKERFILE_PATH=." >> $GITHUB_ENV
+          elif find . -name Dockerfile -type f | grep -q .; then
+            DOCKERFILE_DIR=$(find . -name Dockerfile -type f | head -1 | xargs dirname)
+            echo "DOCKERFILE_PATH=$DOCKERFILE_DIR" >> $GITHUB_ENV
+          else
+            echo "No Dockerfile found in repository"
             exit 0
           fi
 
       - name: Build image
-        run: docker build -t neo-template-scan:latest .
+        run: docker build -t neo-template-scan:latest ${{ env.DOCKERFILE_PATH }}
 
       - name: Run Trivy vulnerability scan
         uses: aquasecurity/trivy-action@v0.12.0
