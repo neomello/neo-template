@@ -1,0 +1,62 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 9 * * *' # diário às 09:00 UTC
+jobs:
+  detect-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node (if package.json exists)
+        if: files.exists('package.json')
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Set up Python (if pyproject.toml or requirements.txt exists)
+        if: files.exists('pyproject.toml') || files.exists('requirements.txt')
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies (Node)
+        if: files.exists('package.json')
+        run: npm ci
+
+      - name: Install dependencies (Python - pip)
+        if: files.exists('requirements.txt')
+        run: pip install -r requirements.txt
+
+      - name: Install dependencies (Python - poetry)
+        if: files.exists('pyproject.toml') && !files.exists('requirements.txt')
+        run: |
+          python -m pip install --upgrade pip
+          pip install poetry
+          poetry install --no-interaction --no-ansi
+
+      - name: Run lint (Node)
+        if: files.exists('package.json')
+        run: npm run lint --if-present
+
+      - name: Run tests (Node)
+        if: files.exists('package.json')
+        run: npm test
+
+      - name: Run tests (Python)
+        if: files.exists('pyproject.toml') || files.exists('requirements.txt')
+        run: |
+          pytest -q || true
+
+      - name: Upload artifacts (tests/logs)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-artifacts
+          path: ./tests || ./reports || ./coverage || .

@@ -1,26 +1,19 @@
-# Dependabot configuration for automatic dependency updates
-# Documentation: https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
 version: 2
 updates:
-  # Python dependencies (requirements.txt)
-  - package-ecosystem: "pip"
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
-
-  # DevContainers configuration
-  - package-ecosystem: "devcontainers"
+    labels:
+      - "dependencies"
+      - "dependabot"
+    commit-message:
+      prefix: "deps"
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 2
-
-  # GitHub Actions workflows
-  - package-ecosystem: "github-actions"
-    directory: "/.github/workflows"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 3
-
+    open-pull-requests-limit: 10
+    labels:
+      - "actions"

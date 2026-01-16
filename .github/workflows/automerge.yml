@@ -1,0 +1,16 @@
+name: Auto-merge Dependabot PRs
+on:
+  pull_request_target:
+    types: [opened, ready_for_review, labeled, synchronize]
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-merge Dependabot when checks pass and label present
+        uses: pascalgn/automerge-action@v0.14.3
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          merge_method: "squash"
+          required_labels: "neonodemerge"
+        env:
+          ALLOWED_AUTHORS: "dependabot[bot],dependabot"
