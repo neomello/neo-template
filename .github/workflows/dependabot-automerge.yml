@@ -1,0 +1,26 @@
+name: Dependabot auto-approve
+on:
+  pull_request_target:
+    types: [opened, reopened, labeled, synchronize]
+jobs:
+  auto-approve:
+    if: contains(github.event.pull_request.user.login, 'dependabot')
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Check for required label
+        run: |
+          labels=$(jq -r '.pull_request.labels[].name' < "$GITHUB_EVENT_PATH" 2>/dev/null || echo "")
+          echo "labels=$labels"
+          if ! echo "$labels" | grep -q '^neonodemerge$'; then
+            echo "Label neonodemerge not present -> exit 78"
+            exit 78
+          fi
+
+      - name: Auto-approve Dependabot PR
+        uses: hmarr/auto-approve-action@v2.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          allowed-reviewers: dependabot[bot],dependabot
