@@ -1,0 +1,23 @@
+---
+name: Container image scan (Trivy)
+on:
+  push:
+    paths:
+      - Dockerfile
+      - '**/Dockerfile'
+      - '.github/workflows/**'
+jobs:
+  trivy-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t neo-template-scan:latest .
+
+      - name: Run Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@v0.12.0
+        with:
+          image-ref: neo-template-scan:latest
+          format: 'table'
