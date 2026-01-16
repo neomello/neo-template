@@ -9,7 +9,7 @@ jobs:
       - name: Auto-merge Dependabot when checks pass and label present
         uses: pascalgn/automerge-action@v0.14.3
         with:
-          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          token: "${{ secrets.GITHUB_TOKEN }}"
           merge_method: "squash"
           required_labels: "neonodemerge"
         env:
