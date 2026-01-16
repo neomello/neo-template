@@ -1,0 +1,39 @@
+name: Ensure labels exist
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  ensure-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure labels
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const labels = [
+              { name: 'status:ready', color: '0e8a16', description: 'Ready to merge' },
+              { name: 'status:review', color: 'fbca04', description: 'Needs review' },
+              { name: 'status:wip', color: '1d76db', description: 'Work in progress' },
+              { name: 'status:stale', color: 'cccccc', description: 'Inactive/obsolete' },
+              { name: 'priority:high', color: 'b60205', description: 'High priority' },
+              { name: 'priority:medium', color: 'd93f0b', description: 'Medium priority' },
+              { name: 'type:bug', color: 'd73a4a', description: 'Bug fix' },
+              { name: 'type:feature', color: '0e8a16', description: 'New feature' }
+            ];
+            for (const l of labels) {
+              try {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: l.name,
+                  color: l.color.replace('#',''),
+                  description: l.description
+                });
+              } catch (e) {
+                // se já existir, ignora
+              }
+            }

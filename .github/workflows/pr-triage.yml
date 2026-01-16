@@ -1,0 +1,51 @@
+name: PR triage
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review, review_requested]
+  schedule:
+    - cron: '0 4 * * *' # roda diariamente (UTC)
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark PRs without reviewers
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const isScheduled = !!(context.payload && context.payload.schedule);
+            if (context.payload.pull_request) {
+              // Trigger via pull_request: só verifica este PR
+              const pr = context.payload.pull_request;
+              const hasReviewers = (pr.requested_reviewers && pr.requested_reviewers.length > 0) || (pr.assignees && pr.assignees.length > 0);
+              const labels = pr.labels ? pr.labels.map(l => l.name) : [];
+              if (!hasReviewers && !labels.includes('status:review') && !labels.includes('status:wip')) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: pr.number,
+                  labels: ['status:review']
+                });
+              }
+              return;
+            }
+            // Scheduled run: lista PRs abertos e aplica label quando necessário
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+            for (const pr of prs) {
+              const hasReviewers = (pr.requested_reviewers && pr.requested_reviewers.length > 0) || (pr.assignees && pr.assignees.length > 0);
+              const labels = pr.labels ? pr.labels.map(l => l.name) : [];
+              if (!hasReviewers && !labels.includes('status:review') && !labels.includes('status:wip')) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: pr.number,
+                  labels: ['status:review']
+                });
+              }
+            }
