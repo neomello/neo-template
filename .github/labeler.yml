@@ -1,0 +1,8 @@
+docs:
+  - 'docs/**'
+ci:
+  - '.github/workflows/**'
+node:
+  - 'package.json'
+python:
+  - 'pyproject.toml'
