@@ -12,6 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check for Dockerfile
+        run: |
+          if [ ! -f Dockerfile ]; then
+            echo "No Dockerfile found in repository root"
+            exit 0
+          fi
+
       - name: Build image
         run: docker build -t neo-template-scan:latest .
 

@@ -4,7 +4,7 @@ on:
     types: [opened, reopened, labeled, synchronize]
 jobs:
   auto-approve:
-    if: contains(github.event.pull_request.user.login, 'dependabot')
+    if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
