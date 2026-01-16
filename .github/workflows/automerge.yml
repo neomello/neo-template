@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto-merge Dependabot when checks pass and label present
-        uses: pascalgn/automerge-action@v0.14.3
+        uses: pascalgn/automerge-action@v0.16.4
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           merge_method: "squash"
