@@ -20,13 +20,17 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install dependencies (Node)
         run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          elif [ -f package.json ]; then
-            npm install
+          if [ -f package.json ]; then
+            if [ -f package-lock.json ]; then
+              npm ci
+            else
+              npm install
+            fi
           else
+            echo "No package.json found — skipping Node install"
+          fi
             echo "No package.json found, skipping Node.js dependencies installation"
           fi
 
