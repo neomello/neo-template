@@ -8,6 +8,8 @@ on:
 jobs:
   ensure-labels:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: Ensure labels
         uses: actions/github-script@v6
