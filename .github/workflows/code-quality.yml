@@ -31,8 +31,6 @@ jobs:
           else
             echo "No package.json found — skipping Node install"
           fi
-            echo "No package.json found, skipping Node.js dependencies installation"
-          fi
 
       - name: Run Prettier check
         run: |
