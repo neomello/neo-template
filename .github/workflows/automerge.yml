@@ -14,3 +14,4 @@ jobs:
           required_labels: "neonodemerge"
         env:
           ALLOWED_AUTHORS: "dependabot[bot],dependabot"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
