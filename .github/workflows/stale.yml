@@ -17,8 +17,12 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-stale: 30
           days-before-close: 7
-          stale-label: status:stale
-          exempt-labels: 'status:wip,priority:high'
+          stale-issue-label: status:stale
+          stale-pr-label: status:stale
+          exempt-issue-labels: 'status:wip,priority:high'
+          exempt-pr-labels: 'status:wip,priority:high'
           operations-per-run: 100
-          close-message: |
+          close-pr-message: |
             Estamos fechando este PR por inatividade. Se ainda for relevante, reabra ou comente com atualizações.
+          close-issue-message: |
+            Estamos fechando esta issue por inatividade. Se ainda for relevante, reabra ou comente com atualizações.
