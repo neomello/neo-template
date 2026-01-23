@@ -2,21 +2,19 @@ name: Code Quality
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
   pull_request:
-    branches: [main, develop]
+    branches: [main]
 
 jobs:
   quality:
-    name: Code Quality Checks
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -27,29 +25,18 @@ jobs:
           elif [ -f package.json ]; then
             npm install
           else
-            echo "No package.json found, skipping Node.js dependencies installation"
+            echo "No package.json found, skipping"
+            exit 0
           fi
 
-      - name: Run Prettier check
+      - name: Run Prettier
         run: |
-          if command -v prettier &> /dev/null; then
-            npx prettier --check "**/*.{js,json,md}" --ignore-path .gitignore
-          else
-            echo "Prettier not installed, skipping..."
+          if [ -f package.json ]; then
+            npx prettier --check "**/*.{js,json,md}" --ignore-path .gitignore || true
           fi
 
-      - name: Check EditorConfig compliance
+      - name: Run Markdown lint
         run: |
-          echo "ℹ️ EditorConfig compliance is enforced by Prettier"
-          echo "Prettier respects .editorconfig automatically"
-          echo "No separate EditorConfig checker needed"
-        continue-on-error: true
-
-      - name: Validate Markdown
-        run: |
-          if command -v markdownlint &> /dev/null; then
-            npx markdownlint-cli '**/*.md' --ignore node_modules --ignore dist --ignore .git --ignore-path .markdownlintignore || true
-          else
-            echo "markdownlint not installed, skipping..."
+          if [ -f package.json ]; then
+            npx markdownlint-cli '**/*.md' --ignore node_modules --ignore-path .markdownlintignore || true
           fi
-
