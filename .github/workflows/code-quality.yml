@@ -13,20 +13,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check for lock file
-        id: check-lock
+      - name: Check for files
+        id: check-files
         run: |
+          echo "has_package_json=$(test -f package.json && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
           echo "has_package_lock=$(test -f package-lock.json && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
 
       - name: Setup Node.js (with cache)
-        if: steps.check-lock.outputs.has_package_lock == 'true'
+        if: steps.check-files.outputs.has_package_lock == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: "npm"
 
       - name: Setup Node.js (without cache)
-        if: steps.check-lock.outputs.has_package_lock == 'false'
+        if: steps.check-files.outputs.has_package_lock == 'false'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
