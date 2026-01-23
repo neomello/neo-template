@@ -13,4 +13,5 @@ jobs:
           merge_method: "squash"
           required_labels: "neonodemerge"
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALLOWED_AUTHORS: "dependabot[bot],dependabot"
