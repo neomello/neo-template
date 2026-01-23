@@ -9,11 +9,12 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       issues: write
       pull-requests: write
     steps:
       - name: Mark PRs without reviewers
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
