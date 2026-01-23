@@ -1,0 +1,24 @@
+name: Close stale issues and PRs
+on:
+  schedule:
+    - cron: '0 0 * * 0' # semanalmente (domingo, 00:00 UTC)
+  workflow_dispatch:
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Run stale action
+        uses: actions/stale@v10
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-stale: 30
+          days-before-close: 7
+          stale-label: status:stale
+          exempt-labels: 'status:wip,priority:high'
+          operations-per-run: 100
+          close-message: |
+            Estamos fechando este PR por inatividade. Se ainda for relevante, reabra ou comente com atualizações.

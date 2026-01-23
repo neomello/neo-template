@@ -1,0 +1,6 @@
+# Ajuste os donos conforme sua equipe.
+# Exemplo: requisita revisão de @neomello para todo o repositório
+*       @neomello
+# Para áreas específicas:
+# src/ @team/backend
+# docs/ @team/docs
