@@ -12,21 +12,24 @@
 
 ### General Settings
 
-1. **Template repository**
-   - ✅ **Enable** — Allows users to generate new repos from this template
-   - Location: Settings → General → Template repository
+1.  **Template repository**
 
-2. **Features**
-   - ✅ **Issues** — Enable (for bug reports and feature requests)
-   - ✅ **Discussions** — Optional (for community Q&A)
-   - ✅ **Projects** — Optional (for project management)
-   - ✅ **Wiki** — Disable (use README/docs instead)
+-  ✅ **Enable** — Allows users to generate new repos from this template
+-  Location: Settings → General → Template repository
 
-3. **Pull Requests**
-   - ✅ **Allow merge commits** — Enable
-   - ✅ **Allow squash merging** — Enable (recommended for clean history)
-   - ✅ **Allow rebase merging** — Enable
-   - ⚠️ **Automatically delete head branches** — Enable (keeps repo clean)
+2.**Features**
+
+-  ✅ **Issues** — Enable (for bug reports and feature requests)
+-  ✅ **Discussions** — Optional (for community Q&A)
+-  ✅ **Projects** — Optional (for project management)
+-  ✅ **Wiki** — Disable (use README/docs instead)
+
+3.**Pull Requests**
+
+-  ✅ **Allow merge commits** — Enable
+-  ✅ **Allow squash merging** — Enable (recommended for clean history)
+-  ✅ **Allow rebase merging** — Enable
+-  ⚠️ **Automatically delete head branches** — Enable (keeps repo clean)
 
 ---
 
@@ -34,16 +37,18 @@
 
 ### Code Security and Analysis
 
-1. **Code scanning**
-   - ✅ **Enabled** (via `.github/workflows/scorecard.yml`)
-   - ✅ **Secret scanning** — Enabled
-   - ✅ **Dependabot alerts** — Enabled (via `.github/dependabot.yml`)
+1.  **Code scanning**
 
-2. **Dependency graph**
-   - ✅ **Enable** — Allows dependency insights
+-  ✅ **Secret scanning** — Enabled
+-  ✅ **Dependabot alerts** — Enabled (via `.github/dependabot.yml`)
 
-3. **Private vulnerability reporting**
-   - ✅ **Enable** — Allows private security reports
+2.**Dependency graph**
+
+-  ✅ **Enable** — Allows dependency insights
+
+3.**Private vulnerability reporting**
+
+-  ✅ **Enable** — Allows private security reports
 
 ---
 
@@ -53,54 +58,65 @@
 
 If you plan to accept external contributions:
 
-1. **Require pull request reviews**
-   - ✅ Enable
-   - Required approvals: 1
-   - Dismiss stale reviews: Enable
+1.**Require pull request reviews**
 
-2. **Require status checks**
-   - ✅ Enable (if using CI/CD)
-   - Require branches to be up to date: Enable
+-  ✅ Enable
+-  Required approvals: 1
+-  Dismiss stale reviews: Enable
 
-3. **Require conversation resolution**
-   - ✅ Enable — Ensures all discussions are resolved
+2.**Require status checks**
 
-4. **Do not allow bypassing**
-   - ✅ Enable — Prevents force pushes
+-  ✅ Enable (if using CI/CD)
+-  Require branches to be up to date: Enable
+
+3.**Require conversation resolution**
+
+-  ✅ Enable — Ensures all discussions are resolved
+
+4.**Do not allow bypassing**
+
+-  ✅ Enable — Prevents force pushes
 
 ---
 
 ## 🚫 Settings to Disable (for template)
 
-1. **Require contributors to sign off**
-   - ❌ **Disable** — Not needed for template repository
-   - Reason: Adds friction, template is for personal use
+1.  **Require contributors to sign off**
 
-2. **Allow force pushes**
-   - ❌ **Disable** — Prevents accidental history rewrites
+-  ❌ **Disable** — Not needed for template repository
+-  Reason: Adds friction, template is for personal use
 
-3. **Allow deletions**
-   - ❌ **Disable** — Protects main branch
+2.  **Allow force pushes**
+
+-  ❌ **Disable** — Prevents accidental history rewrites
+
+3.  **Allow deletions**
+
+-  ❌ **Disable** — Protects main branch
 
 ---
 
 ## Actions Settings
 
-1. **Actions permissions**
-   - ✅ **Allow all actions** — For workflows (scorecard, etc.)
+1.  **Actions permissions**
 
-2. **Workflow permissions**
-   - ✅ **Read and write permissions** — For automated tasks
+-  ✅ **Allow all actions** — For workflows (CI, code quality, security)
+
+2.  **Workflow permissions**
+
+-  ✅ **Read and write permissions** — For automated tasks
 
 ---
 
 ## 📊 Insights & Analytics
 
-1. **Insights**
-   - ✅ **Enable** — View repository analytics
+1.  **Insights**
 
-2. **Traffic**
-   - ✅ **Enable** — See clones, views, referrers
+-  ✅ **Enable** — View repository analytics
+
+2.  **Traffic**
+
+-  ✅ **Enable** — See clones, views, referrers
 
 ---
 
@@ -108,11 +124,11 @@ If you plan to accept external contributions:
 
 ### For Template Repository
 
-1. **Enable template repository** ✅
-2. **Enable security features** ✅
-3. **Disable sign-off requirement** ❌
-4. **Enable branch protection** (if accepting PRs)
-5. **Keep workflows minimal** (scorecard is enough)
+1.  **Enable template repository** ✅
+2.  **Enable security features** ✅
+3.  **Disable sign-off requirement** ❌
+4.  **Enable branch protection** (if accepting PRs)
+5.  **Keep workflows minimal** (CI, code quality, security)
 
 ---
 
@@ -120,17 +136,19 @@ If you plan to accept external contributions:
 
 ### ✅ Already Configured
 
-- `.github/secret-scanning.yml` — Secret scanning config
-- `.github/dependabot.yml` — Dependency updates
-- `.github/workflows/scorecard.yml` — Security analysis
-- `.github/FUNDING.yml` — Sponsorship links
-- `.gitattributes` — Git file handling
+-  `.github/secret-scanning.yml` — Secret scanning config
+-  `.github/dependabot.yml` — Dependency updates
+-  `.github/workflows/ci.yml` — Continuous Integration
+-  `.github/workflows/code-quality.yml` — Code quality checks
+-  `.github/workflows/security.yml` — Security scanning
+-  `.github/FUNDING.yml` — Sponsorship links
+-  `.gitattributes` — Git file handling
 
 ### ⚠️ To Configure Manually
 
-1. **Template repository** — Enable in Settings
-2. **Branch protection** — Configure if accepting PRs
-3. **Actions permissions** — Verify workflow access
+1.  **Template repository** — Enable in Settings
+2.  **Branch protection** — Configure if accepting PRs
+3.  **Actions permissions** — Verify workflow access
 
 ---
 
@@ -145,4 +163,3 @@ If you plan to accept external contributions:
 **Author:** MELLØ // NEØ DEV
 
 This configuration ensures the template is secure, discoverable, and easy to use.
-
