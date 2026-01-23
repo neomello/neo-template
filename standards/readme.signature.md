@@ -1,5 +1,6 @@
 <!-- readme signature - para projetos e READMEs -->
-
+<div align="center">
+  
 ## Contact
 
 [neo@neoprotocol.space](mailto:neo@neoprotocol.space)
@@ -13,7 +14,7 @@
   <a href="https://www.instagram.com/neoprotocol.eth/">
     <img src="https://img.shields.io/badge/-@neoprotocol.eth-ff008e?style=flat-square&logo=instagram&logoColor=white" alt="Instagram @neoprotocol.eth" />
   </a>
-  <a href="https://etherscan.io/">
+  <a href="https://etherscan.io/address/0xe329ea473d4307b734487d2ab35281b4d2557cb7">
     <img src="https://img.shields.io/badge/-neomello.eth-ff008e?style=flat-square&logo=ethereum&logoColor=white" alt="Ethereum neomello.eth" />
   </a>
 </div>

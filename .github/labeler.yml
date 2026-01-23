@@ -1,0 +1,24 @@
+# Labeler configuration
+# https://github.com/actions/labeler
+# Format updated for v6 compatibility
+
+docs:
+- changed-files:
+- any-glob-to-any-file:
+  - 'docs/**'
+  - 'standards/**'
+  - '*.md'
+
+ci:
+- changed-files:
+- any-glob-to-any-file:
+  - '.github/workflows/**'
+  - '.github/**'
+
+dependencies:
+- changed-files:
+- any-glob-to-any-file:
+  - 'package.json'
+  - 'package-lock.json'
+  - 'requirements.txt'
+  - 'pyproject.toml'

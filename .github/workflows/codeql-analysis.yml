@@ -18,13 +18,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check for source code
+        id: check-code
+        run: |
+          if find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" -o -name "*.py" \) ! -path "./node_modules/*" ! -path "./.git/*" | grep -q .; then
+            echo "has_code=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_code=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Initialize CodeQL
+        if: steps.check-code.outputs.has_code == 'true'
         uses: github/codeql-action/init@v2
         with:
           languages: javascript, python
 
       - name: Autobuild
+        if: steps.check-code.outputs.has_code == 'true'
         uses: github/codeql-action/autobuild@v2
 
       - name: Run CodeQL analysis
+        if: steps.check-code.outputs.has_code == 'true'
         uses: github/codeql-action/analyze@v2
+
+      - name: Skip analysis (no source code)
+        if: steps.check-code.outputs.has_code == 'false'
+        run: echo "No JavaScript/TypeScript or Python source code found. Skipping CodeQL analysis."
