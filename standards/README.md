@@ -11,6 +11,7 @@ Padrões e convenções para desenvolvimento seguindo o **NEØ Protocol**.
 ### Documentação e Markdown
 
 -  **`markdown.rules.md`** - Regras de formatação Markdown (MD030, MD032, MD040, etc)
+-  **`markdown.ascii-style.md`** - Padrão de estilo visual ASCII para documentação (retro terminal e box drawing)
 -  **`ai.rules.md`** - Regras para uso de IA e comportamento do Cursor
 -  **`readme.template.md`** - Template base para READMEs de projetos
 -  **`readme.signature.md`** - Assinatura completa para projetos e READMEs
