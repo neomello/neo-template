@@ -116,7 +116,7 @@ Use este estilo para **evidências, dados estruturados e informações categoriz
 ├─────────────────────────────────────────────────────────────────────────────┤
 │ ▓▓▓ REMOTE                                                                  │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│ └─ origin → git@github.com:neo-smart-token-factory/smart-ui.git            │
+│ └─ origin → git@github.com:neo-smart-token-factory/smart-ui.git             │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │ ▓▓▓ WORKFLOWS                                                               │
 ├─────────────────────────────────────────────────────────────────────────────┤
