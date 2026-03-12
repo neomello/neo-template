@@ -24,6 +24,17 @@ projeto/
 └── arquivo2
 ```
 
+## Diagrama
+
+Se o projeto exigir um diagrama visual forte no `README`, não commite apenas um `.svg` isolado.
+
+Use o padrão documentado em `standards/svg.parametric.playbook.md`:
+
+- fonte parametrizável
+- renderizador
+- saída SVG renderizada
+- links para fonte e renderizador no próprio `README`
+
 ## Contribuindo
 
 Este projeto segue os padrões NEØ. Consulte `standards/` para mais informações.

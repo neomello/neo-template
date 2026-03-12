@@ -16,6 +16,7 @@ Padrões e convenções para desenvolvimento seguindo o **NEØ Protocol**.
 -  **`readme.template.md`** - Template base para READMEs de projetos
 -  **`readme.signature.md`** - Assinatura completa para projetos e READMEs
 -  **`readme.signature.contracts.md`** - Assinatura simples para contratos e tokens
+-  **`svg.parametric.playbook.md`** - Método para criar diagramas SVG parametrizáveis com fonte canônica, renderizador e integração no README
 -  **`contract.template.sol`** - Template base para contratos Solidity
 
 ### Shell e Terminal
@@ -96,6 +97,7 @@ contract MyToken is ERC20 {
 1.  Consulte `readme.template.md` para estrutura base
 2.  Adicione a assinatura de `readme.signature.md` no final
 3.  Ajuste conforme necessário
+4.  Se houver diagrama visual importante, consulte `svg.parametric.playbook.md`
 
 ### Em Contratos Solidity
 
