@@ -86,11 +86,11 @@ If you plan to accept external contributions:
 - ❌ **Disable** — Not needed for template repository
 - Reason: Adds friction, template is for personal use
 
-2.  **Allow force pushes**
+1.  **Allow force pushes**
 
 - ❌ **Disable** — Prevents accidental history rewrites
 
-3.  **Allow deletions**
+1.  **Allow deletions**
 
 - ❌ **Disable** — Protects main branch
 
@@ -102,7 +102,7 @@ If you plan to accept external contributions:
 
 - ✅ **Allow all actions** — For workflows (CI, code quality, security)
 
-2.  **Workflow permissions**
+1.  **Workflow permissions**
 
 - ✅ **Read and write permissions** — For automated tasks
 
@@ -114,7 +114,7 @@ If you plan to accept external contributions:
 
 - ✅ **Enable** — View repository analytics
 
-2.  **Traffic**
+1.  **Traffic**
 
 - ✅ **Enable** — See clones, views, referrers
 
