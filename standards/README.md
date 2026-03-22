@@ -4,32 +4,68 @@ Padrões e convenções para desenvolvimento seguindo o **NEØ Protocol**.
 
 **Última atualização:** 2025-12-25
 
-**Nota:** Estes padrões seguem o protocolo definido em `neomello-workflow.md`. Consulte `WORKFLOW.md` para resumo rápido dos workflows.
+**Nota:** Estes padrões seguem o protocolo definido em `neomello-workflow.md`. Consulte
+`WORKFLOW.md` para resumo rápido dos workflows.
+
+## 🚦 Obrigatório vs Referência
+
+Nem todo padrão cria atrito. A distinção é simples: **obrigatório** falha o CI automaticamente;
+**referência** é consultado quando você precisa, sem nenhum check automático.
+
+| Status     | O que significa                                                          |
+| ---------- | ------------------------------------------------------------------------ |
+| 🔴 **CI**  | Verificado automaticamente em todo push/PR. Violação bloqueia o merge.   |
+| 🟡 **IA**  | Lido pelo Cursor automaticamente via `.cursorrules`. Sem bloqueio de CI. |
+| ⚪ **REF** | Consulta manual. Sem automação.                                          |
+
+### O que o CI verifica
+
+| Workflow                | Ferramenta        | Trigger                                                   | O que trava                                              |
+| ----------------------- | ----------------- | --------------------------------------------------------- | -------------------------------------------------------- |
+| `ci.yml`                | markdownlint      | push / PR → `main`                                        | Regras de `.markdownlint.json` em todos os `*.md`        |
+| `code-quality.yml`      | Prettier          | push / PR → `main`                                        | Formatação de `*.md`, `*.json`, `*.yml`, `*.yaml`        |
+| `security.yml`          | Gitleaks          | push / PR → `main` + toda segunda-feira (00:00 UTC)       | Segredos commitados no histórico                         |
+| `dependency-review.yml` | Dependency Review | PR → `main` (apenas `package.json` / `package-lock.json`) | Dependências com vulnerabilidade ≥ high, licença não-MIT |
+
+---
 
 ## 📋 Arquivos de Padrões
 
-### Documentação e Markdown
+### 🔴 CI — Obrigatório (falha o build se violado)
 
--  **`markdown.rules.md`** - Regras de formatação Markdown (MD030, MD032, MD040, etc)
--  **`markdown.ascii-style.md`** - Padrão de estilo visual ASCII para documentação (retro terminal e box drawing)
--  **`ai.rules.md`** - Regras para uso de IA e comportamento do Cursor
--  **`readme.template.md`** - Template base para READMEs de projetos
--  **`readme.signature.md`** - Assinatura completa para projetos e READMEs
--  **`readme.signature.contracts.md`** - Assinatura simples para contratos e tokens
--  **`svg.parametric.playbook.md`** - Método para criar diagramas SVG parametrizáveis com fonte canônica, renderizador e integração no README
--  **`contract.template.sol`** - Template base para contratos Solidity
+- **`markdown.rules.md`** `[CI]` — Explica as regras do `.markdownlint.json` ativo (MD001, MD003,
+  MD007, MD030…). Qualquer `*.md` que viole essas regras falha o workflow `ci.yml`.
+- **`.prettierrc.json`** (raiz do repo) `[CI]` — Configuração canônica do Prettier. Arquivos `*.md`,
+  `*.json`, `*.yml` e `*.yaml` fora do padrão falham o workflow `code-quality.yml`.
 
-### Shell e Terminal
+### 🟡 IA — Lido automaticamente pelo Cursor (sem bloqueio de CI)
 
--  **`zshrc.rules.md`** - Regras e padrões para configuração do shell
--  **`zshrc.analysis.md`** - Análise e recomendações para .zshrc
+- **`ai.rules.md`** `[IA]` — Instruções de comportamento para o Cursor/GPT. Referenciado em
+  `.cursorrules`; aplica-se a toda sessão de IA no workspace.
+- **`HOW_CURSOR_READS.md`** `[IA]` — Explica como o Cursor processa e prioriza os padrões.
 
-### Outros
+### ⚪ REF — Referência (consultar quando necessário, sem automação)
 
--  **`extensions.txt`** - Lista de extensões Cursor/VS Code
--  **`links.md`** - Links úteis e referências
--  **`HOW_CURSOR_READS.md`** - Como o Cursor lê os padrões
--  **`WORKFLOW.md`** - Resumo do workflow protocol (referência: `neomello-workflow.md`)
+#### Documentação e Markdown
+
+- **`markdown.ascii-style.md`** — Padrão visual ASCII retro/terminal (box drawing). Estético, não
+  verificado por lint.
+- **`readme.template.md`** — Template base para READMEs de projetos.
+- **`readme.signature.md`** — Assinatura completa para projetos e READMEs.
+- **`readme.signature.contracts.md`** — Assinatura simples para contratos e tokens.
+- **`svg.parametric.playbook.md`** — Método para criar diagramas SVG parametrizáveis.
+- **`contract.template.sol`** — Template base para contratos Solidity.
+
+#### Shell e Terminal
+
+- **`zshrc.rules.md`** — Regras e padrões para configuração do shell.
+- **`zshrc.analysis.md`** — Análise e recomendações para `.zshrc`.
+
+#### Outros
+
+- **`extensions.txt`** — Lista de extensões Cursor/VS Code recomendadas.
+- **`links.md`** — Links úteis e referências externas.
+- **`WORKFLOW.md`** — Resumo do workflow protocol (referência: `neomello-workflow.md`).
 
 ## 🎯 Quando Usar Cada Assinatura
 
@@ -37,40 +73,40 @@ Padrões e convenções para desenvolvimento seguindo o **NEØ Protocol**.
 
 **Use para:**
 
--  READMEs de projetos
--  Documentação de APIs
--  Repositórios públicos
--  Qualquer projeto que precise de contato e links sociais
+- READMEs de projetos
+- Documentação de APIs
+- Repositórios públicos
+- Qualquer projeto que precise de contato e links sociais
 
 **Características:**
 
--  Badges com links sociais (Twitter, Instagram, Ethereum)
--  Email de contato
--  Citação filosófica
--  Visual rico e profissional
+- Badges com links sociais (Twitter, Instagram, Ethereum)
+- Email de contato
+- Citação filosófica
+- Visual rico e profissional
 
 **Exemplo de uso:**
 
 ```markdown
 ## Contact
-[neo@neoprotocol.space](mailto:neo@neoprotocol.space)
-...
+
+[neo@neoprotocol.space](mailto:neo@neoprotocol.space) ...
 ```
 
 ### `readme.signature.contracts.md` — Contratos e Tokens
 
 **Use para:**
 
--  Comentários em contratos Solidity (`@author`)
--  Documentação técnica de tokens
--  Arquivos de código que precisam de assinatura simples
--  Contextos onde badges/links não são apropriados
+- Comentários em contratos Solidity (`@author`)
+- Documentação técnica de tokens
+- Arquivos de código que precisam de assinatura simples
+- Contextos onde badges/links não são apropriados
 
 **Características:**
 
--  Texto simples
--  Autor e padrões de trabalho
--  Sem formatação HTML/Markdown complexa
+- Texto simples
+- Autor e padrões de trabalho
+- Sem formatação HTML/Markdown complexa
 
 **Exemplo de uso:**
 
@@ -86,9 +122,9 @@ contract MyToken is ERC20 {
 
 **⚠️ Importante:**
 
--  Use `MELLO` (sem Ø) em comentários Solidity para compatibilidade
--  Não use `@title` específico - deixe genérico ou remova
--  Use apenas `@dev` e `@author`
+- Use `MELLO` (sem Ø) em comentários Solidity para compatibilidade
+- Não use `@title` específico - deixe genérico ou remova
+- Use apenas `@dev` e `@author`
 
 ## 📝 Como Aplicar
 
@@ -110,8 +146,8 @@ contract MyToken is ERC20 {
 
 O Cursor lê automaticamente:
 
--  `.cursorrules` (referencia os padrões)
--  `standards/ai.rules.md` (instruções para IA)
+- `.cursorrules` (referencia os padrões)
+- `standards/ai.rules.md` (instruções para IA)
 
 A IA deve consultar os arquivos de assinatura quando criar novos READMEs ou contratos.
 

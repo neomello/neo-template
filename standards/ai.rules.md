@@ -6,7 +6,8 @@
 
 ### Como Funciona
 
-O Cursor lê automaticamente o `.cursorrules` na raiz do projeto. Este arquivo referencia os padrões em `standards/`.
+O Cursor lê automaticamente o `.cursorrules` na raiz do projeto. Este arquivo referencia os padrões
+em `standards/`.
 
 ### Quando Criar ou Editar Arquivos
 
@@ -18,11 +19,11 @@ O Cursor lê automaticamente o `.cursorrules` na raiz do projeto. Este arquivo r
 
 ### Padrões de Código
 
--  **Indentação**: 2 espaços (não tabs)
--  **Encoding**: UTF-8
--  **Line endings**: LF (Unix)
--  **Trailing whitespace**: Remover
--  **Final newline**: Sempre adicionar
+- **Indentação**: 2 espaços (não tabs)
+- **Encoding**: UTF-8
+- **Line endings**: LF (Unix)
+- **Trailing whitespace**: Remover
+- **Final newline**: Sempre adicionar
 
 ### Padrões de Markdown
 
@@ -34,6 +35,7 @@ O Cursor lê automaticamente o `.cursorrules` na raiz do projeto. Este arquivo r
 Conteúdo aqui.
 
 ### ❌ Incorreto
+
 Conteúdo aqui.
 ```
 
@@ -43,6 +45,7 @@ Conteúdo aqui.
 
 ```markdown
 ## Contact
+
 [neo@neoprotocol.space](mailto:neo@neoprotocol.space)
 
 </div>
@@ -75,13 +78,13 @@ Conteúdo aqui.
 
 **⚠️ Regras importantes:**
 
--  Use `MELLO` (sem Ø) em código Solidity para compatibilidade
--  Não use `@title` específico - deixe genérico ou remova
--  Use apenas `@dev` e `@author` nos comentários
--  Consulte `standards/contract.template.sol` para template base
+- Use `MELLO` (sem Ø) em código Solidity para compatibilidade
+- Não use `@title` específico - deixe genérico ou remova
+- Use apenas `@dev` e `@author` nos comentários
+- Consulte `standards/contract.template.sol` para template base
 
 ### Referências
 
--  Ver `standards/markdown.rules.md` para regras completas de Markdown
--  Ver `standards/README.md` para padrões de trabalho
--  Ver `.markdown-style-guide.md` para guia completo
+- Ver `standards/markdown.rules.md` para regras completas de Markdown
+- Ver `standards/README.md` para padrões de trabalho
+- Ver `standards/markdown.ascii-style.md` para guia de estilo visual ASCII

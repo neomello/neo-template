@@ -14,22 +14,22 @@
 
 1.  **Template repository**
 
--  ✅ **Enable** — Allows users to generate new repos from this template
--  Location: Settings → General → Template repository
+- ✅ **Enable** — Allows users to generate new repos from this template
+- Location: Settings → General → Template repository
 
-2.**Features**
+  2.**Features**
 
--  ✅ **Issues** — Enable (for bug reports and feature requests)
--  ✅ **Discussions** — Optional (for community Q&A)
--  ✅ **Projects** — Optional (for project management)
--  ✅ **Wiki** — Disable (use README/docs instead)
+- ✅ **Issues** — Enable (for bug reports and feature requests)
+- ✅ **Discussions** — Optional (for community Q&A)
+- ✅ **Projects** — Optional (for project management)
+- ✅ **Wiki** — Disable (use README/docs instead)
 
-3.**Pull Requests**
+  3.**Pull Requests**
 
--  ✅ **Allow merge commits** — Enable
--  ✅ **Allow squash merging** — Enable (recommended for clean history)
--  ✅ **Allow rebase merging** — Enable
--  ⚠️ **Automatically delete head branches** — Enable (keeps repo clean)
+- ✅ **Allow merge commits** — Enable
+- ✅ **Allow squash merging** — Enable (recommended for clean history)
+- ✅ **Allow rebase merging** — Enable
+- ⚠️ **Automatically delete head branches** — Enable (keeps repo clean)
 
 ---
 
@@ -39,16 +39,16 @@
 
 1.  **Code scanning**
 
--  ✅ **Secret scanning** — Enabled
--  ✅ **Dependabot alerts** — Enabled (via `.github/dependabot.yml`)
+- ✅ **Secret scanning** — Enabled
+- ✅ **Dependabot alerts** — Enabled (via `.github/dependabot.yml`)
 
-2.**Dependency graph**
+  2.**Dependency graph**
 
--  ✅ **Enable** — Allows dependency insights
+- ✅ **Enable** — Allows dependency insights
 
-3.**Private vulnerability reporting**
+  3.**Private vulnerability reporting**
 
--  ✅ **Enable** — Allows private security reports
+- ✅ **Enable** — Allows private security reports
 
 ---
 
@@ -60,22 +60,22 @@ If you plan to accept external contributions:
 
 1.**Require pull request reviews**
 
--  ✅ Enable
--  Required approvals: 1
--  Dismiss stale reviews: Enable
+- ✅ Enable
+- Required approvals: 1
+- Dismiss stale reviews: Enable
 
-2.**Require status checks**
+  2.**Require status checks**
 
--  ✅ Enable (if using CI/CD)
--  Require branches to be up to date: Enable
+- ✅ Enable (if using CI/CD)
+- Require branches to be up to date: Enable
 
-3.**Require conversation resolution**
+  3.**Require conversation resolution**
 
--  ✅ Enable — Ensures all discussions are resolved
+- ✅ Enable — Ensures all discussions are resolved
 
-4.**Do not allow bypassing**
+  4.**Do not allow bypassing**
 
--  ✅ Enable — Prevents force pushes
+- ✅ Enable — Prevents force pushes
 
 ---
 
@@ -83,16 +83,16 @@ If you plan to accept external contributions:
 
 1.  **Require contributors to sign off**
 
--  ❌ **Disable** — Not needed for template repository
--  Reason: Adds friction, template is for personal use
+- ❌ **Disable** — Not needed for template repository
+- Reason: Adds friction, template is for personal use
 
 2.  **Allow force pushes**
 
--  ❌ **Disable** — Prevents accidental history rewrites
+- ❌ **Disable** — Prevents accidental history rewrites
 
 3.  **Allow deletions**
 
--  ❌ **Disable** — Protects main branch
+- ❌ **Disable** — Protects main branch
 
 ---
 
@@ -100,11 +100,11 @@ If you plan to accept external contributions:
 
 1.  **Actions permissions**
 
--  ✅ **Allow all actions** — For workflows (CI, code quality, security)
+- ✅ **Allow all actions** — For workflows (CI, code quality, security)
 
 2.  **Workflow permissions**
 
--  ✅ **Read and write permissions** — For automated tasks
+- ✅ **Read and write permissions** — For automated tasks
 
 ---
 
@@ -112,11 +112,11 @@ If you plan to accept external contributions:
 
 1.  **Insights**
 
--  ✅ **Enable** — View repository analytics
+- ✅ **Enable** — View repository analytics
 
 2.  **Traffic**
 
--  ✅ **Enable** — See clones, views, referrers
+- ✅ **Enable** — See clones, views, referrers
 
 ---
 
@@ -136,13 +136,13 @@ If you plan to accept external contributions:
 
 ### ✅ Already Configured
 
--  `.github/secret-scanning.yml` — Secret scanning config
--  `.github/dependabot.yml` — Dependency updates
--  `.github/workflows/ci.yml` — Continuous Integration
--  `.github/workflows/code-quality.yml` — Code quality checks
--  `.github/workflows/security.yml` — Security scanning
--  `.github/FUNDING.yml` — Sponsorship links
--  `.gitattributes` — Git file handling
+- `.github/secret-scanning.yml` — Secret scanning config
+- `.github/dependabot.yml` — Dependency updates
+- `.github/workflows/ci.yml` — Continuous Integration
+- `.github/workflows/code-quality.yml` — Code quality checks
+- `.github/workflows/security.yml` — Security scanning
+- `.github/FUNDING.yml` — Sponsorship links
+- `.gitattributes` — Git file handling
 
 ### ⚠️ To Configure Manually
 

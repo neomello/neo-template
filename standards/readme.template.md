@@ -40,6 +40,7 @@ Use o padrão documentado em `standards/svg.parametric.playbook.md`:
 Este projeto segue os padrões NEØ. Consulte `standards/` para mais informações.
 
 ---
+
 <!-- readme signature - para projetos e READMEs -->
 <div align="center">
   
