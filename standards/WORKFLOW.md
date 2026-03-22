@@ -22,29 +22,29 @@
 
 **Quando usar:**
 
--  Problema estrutural ou mal definido
--  Sistema ainda não existe
--  Decisões iniciais impactam todo o ciclo de vida
+- Problema estrutural ou mal definido
+- Sistema ainda não existe
+- Decisões iniciais impactam todo o ciclo de vida
 
 **Características:**
 
--  Inicia sempre em markdown
--  Uso intensivo de diagramas
--  README antes de qualquer código executável
--  Definição explícita de escopo e não-escopo
--  Ausência deliberada de UI
+- Inicia sempre em markdown
+- Uso intensivo de diagramas
+- README antes de qualquer código executável
+- Definição explícita de escopo e não-escopo
+- Ausência deliberada de UI
 
 **Artefatos esperados:**
 
--  `docs/ARCHITECTURE.md`
--  `docs/PHILOSOPHY.md`
--  `README.md`
--  Diagramas mermaid
+- `docs/ARCHITECTURE.md`
+- `docs/PHILOSOPHY.md`
+- `README.md`
+- Diagramas mermaid
 
 **Padrões relacionados:**
 
--  `readme.template.md` - Template para README
--  `markdown.rules.md` - Regras de documentação
+- `readme.template.md` - Template para README
+- `markdown.rules.md` - Regras de documentação
 
 ---
 
@@ -52,27 +52,27 @@
 
 **Quando usar:**
 
--  Arquitetura já está definida
--  Objetivo é destravar avanço
--  Necessidade de velocidade controlada
+- Arquitetura já está definida
+- Objetivo é destravar avanço
+- Necessidade de velocidade controlada
 
 **Características:**
 
--  Foco em código funcional
--  Documentação mínima, porém suficiente
--  Commits frequentes e sem medo de refatoração
--  Testes focados em pontos críticos
+- Foco em código funcional
+- Documentação mínima, porém suficiente
+- Commits frequentes e sem medo de refatoração
+- Testes focados em pontos críticos
 
 **Artefatos esperados:**
 
--  Código executável
--  Scripts utilitários
--  Automações
+- Código executável
+- Scripts utilitários
+- Automações
 
 **Padrões relacionados:**
 
--  `ai.rules.md` - Regras de código
--  `contract.template.sol` - Template para contratos
+- `ai.rules.md` - Regras de código
+- `contract.template.sol` - Template para contratos
 
 ---
 
@@ -80,29 +80,29 @@
 
 **Quando usar:**
 
--  Algo funcionou e precisa ser reutilizável
--  Surgem repetições
--  Risco de fragmentação aumenta
+- Algo funcionou e precisa ser reutilizável
+- Surgem repetições
+- Risco de fragmentação aumenta
 
 **Características:**
 
--  Reorganização de pastas
--  Extração de padrões
--  Criação de templates
--  Documentação pragmática
+- Reorganização de pastas
+- Extração de padrões
+- Criação de templates
+- Documentação pragmática
 
 **Artefatos esperados:**
 
--  Templates de repositório
--  Padrões de README
--  Workflows de CI
--  Convenções explícitas
+- Templates de repositório
+- Padrões de README
+- Workflows de CI
+- Convenções explícitas
 
 **Padrões relacionados:**
 
--  Todos os arquivos em `standards/` são resultado deste workflow
--  `readme.template.md` - Template consolidado
--  `contract.template.sol` - Template consolidado
+- Todos os arquivos em `standards/` são resultado deste workflow
+- `readme.template.md` - Template consolidado
+- `contract.template.sol` - Template consolidado
 
 ---
 
@@ -110,27 +110,27 @@
 
 **Quando usar:**
 
--  Ocorre falha crítica
--  Ambiente é corrompido
--  Há perda parcial de contexto
+- Ocorre falha crítica
+- Ambiente é corrompido
+- Há perda parcial de contexto
 
 **Características:**
 
--  Prioridade em preservar sentido
--  Extração manual de dados
--  Registros narrativos humanos
--  Decisão consciente sobre reintegração
+- Prioridade em preservar sentido
+- Extração manual de dados
+- Registros narrativos humanos
+- Decisão consciente sobre reintegração
 
 **Artefatos esperados:**
 
--  Pasta RECOVERY
--  Arquivos .save
--  Logs manuais
+- Pasta RECOVERY
+- Arquivos .save
+- Logs manuais
 
 **Padrões relacionados:**
 
--  `scripts/install.sh` - Script de recuperação
--  Documentação completa em `standards/`
+- `scripts/install.sh` - Script de recuperação
+- Documentação completa em `standards/`
 
 ---
 
@@ -138,33 +138,33 @@
 
 ### Perfil Arquiteto
 
--  Define estruturas
--  Cria contratos
--  Estabelece padrões
--  Decide o que não entra
+- Define estruturas
+- Cria contratos
+- Estabelece padrões
+- Decide o que não entra
 
 **Permissões:** Alterações estruturais, decisões irreversíveis
 
 ### Perfil Executor
 
--  Implementa soluções
--  Opera dentro dos padrões
--  Avança entregas
+- Implementa soluções
+- Opera dentro dos padrões
+- Avança entregas
 
 **Restrições:** Não redefinir arquitetura
 
 ### Perfil Auditor
 
--  Revisa decisões passadas
--  Valida coerência sistêmica
--  Remove excessos
--  Documenta falhas
+- Revisa decisões passadas
+- Valida coerência sistêmica
+- Remove excessos
+- Documenta falhas
 
 ### Perfil Nó Externo Simulado
 
--  Testa onboarding
--  Identifica fricções
--  Valida legibilidade
+- Testa onboarding
+- Identifica fricções
+- Valida legibilidade
 
 **Atuação:** Leitura fria, execução sem contexto prévio
 
@@ -172,31 +172,30 @@
 
 ## Regras de Transição
 
--  WF-01 pode transitar para WF-02 somente após contratos explícitos
--  WF-02 deve transitar para WF-03 ao detectar padrões repetidos
--  WF-04 pode ser acionado a partir de qualquer workflow
--  Nenhuma transição é automática
+- WF-01 pode transitar para WF-02 somente após contratos explícitos
+- WF-02 deve transitar para WF-03 ao detectar padrões repetidos
+- WF-04 pode ser acionado a partir de qualquer workflow
+- Nenhuma transição é automática
 
 ---
 
 ## Anti-Padrões
 
--  Começar por UI
--  Codar sem README
--  Decisões implícitas
--  Dependência tácita do autor
--  Confundir velocidade com pressa
+- Começar por UI
+- Codar sem README
+- Decisões implícitas
+- Dependência tácita do autor
+- Confundir velocidade com pressa
 
 ---
 
 ## Observação Final
 
-Este protocolo não busca eficiência máxima.
-Busca continuidade, clareza e soberania operacional.
+Este protocolo não busca eficiência máxima. Busca continuidade, clareza e soberania operacional.
 
-Quando corretamente aplicado, o sistema se sustenta, evolui e incorpora novos nós sem exigir presença constante do criador.
+Quando corretamente aplicado, o sistema se sustenta, evolui e incorpora novos nós sem exigir
+presença constante do criador.
 
 ---
 
 **Para detalhes completos, consulte:** `../neomello-workflow.md`
-

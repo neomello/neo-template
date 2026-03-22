@@ -2,8 +2,8 @@
 
 ## Padrões para .zshrc
 
-> **⚠️ IMPORTANTE**: Nunca versionar API keys ou secrets no .zshrc!
-> Use arquivo separado `~/.zshrc.secrets` (não versionado).
+> **⚠️ IMPORTANTE**: Nunca versionar API keys ou secrets no .zshrc! Use arquivo separado
+> `~/.zshrc.secrets` (não versionado).
 
 ### .zshrc.secrets - Organização com Comentários
 
@@ -41,10 +41,10 @@ export THIRDWEB_SECRET_KEY="..."
 
 **Benefícios dos comentários:**
 
--  Organização por seções (separadores visuais)
--  Documentação de cada API key (descrição, data)
--  Avisos de segurança (nunca versionar)
--  Facilita manutenção e identificação de keys
+- Organização por seções (separadores visuais)
+- Documentação de cada API key (descrição, data)
+- Avisos de segurança (nunca versionar)
+- Facilita manutenção e identificação de keys
 
 ### Estrutura Recomendada do .zshrc
 
@@ -64,11 +64,11 @@ alias ll="ls -la"
 
 ### Boas Práticas
 
--  **Comentários**: Sempre comente seções importantes
--  **Organização**: Agrupe por categoria (brew, nvm, aliases, paths)
--  **Versionamento**: Mantenha backup do .zshrc
--  **Aliases**: Use nomes descritivos e curtos
--  **Paths**: Adicione paths customizados no final
+- **Comentários**: Sempre comente seções importantes
+- **Organização**: Agrupe por categoria (brew, nvm, aliases, paths)
+- **Versionamento**: Mantenha backup do .zshrc
+- **Aliases**: Use nomes descritivos e curtos
+- **Paths**: Adicione paths customizados no final
 
 ### Aliases Úteis para Dev
 
@@ -98,4 +98,3 @@ alias dcd='docker-compose down'
 #   npm run "$@"
 # }
 ```
-

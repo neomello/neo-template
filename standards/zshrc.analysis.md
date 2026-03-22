@@ -34,15 +34,15 @@ export GITHUB_PAT="ghp_..."
 
 ### 3. Falta de Organização
 
--  Sem comentários de seção
--  Sem agrupamento lógico
--  Configurações misturadas
+- Sem comentários de seção
+- Sem agrupamento lógico
+- Configurações misturadas
 
 ### 4. Falta de Aliases Úteis
 
--  Sem aliases para git
--  Sem aliases para navegação
--  Sem funções personalizadas para projetos
+- Sem aliases para git
+- Sem aliases para navegação
+- Sem funções personalizadas para projetos
 
 ## 📋 Sugestões de Melhoria
 
@@ -154,4 +154,3 @@ export CRUSH_CONFIG="/Users/nettomello/CODIGOS/config.json"
 1.  **URGENTE**: Mover API keys para arquivo separado
 2.  **IMPORTANTE**: Remover duplicação do NVM
 3.  **ÚTIL**: Adicionar aliases e organização
-

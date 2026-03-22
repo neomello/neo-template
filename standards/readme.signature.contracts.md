@@ -6,9 +6,9 @@
 
 **IMPORTANTE:**
 
--  Use `MELLO` (sem Ø) em comentários Solidity para compatibilidade
--  Não use `@title` específico - deixe genérico ou remova
--  Use apenas `@dev` e `@author` nos comentários
+- Use `MELLO` (sem Ø) em comentários Solidity para compatibilidade
+- Não use `@title` específico - deixe genérico ou remova
+- Use apenas `@dev` e `@author` nos comentários
 
 **Template padrão:**
 
@@ -37,5 +37,5 @@ contract MyToken is ERC20 {
 }
 ```
 
-**Nota:** O caractere "Ø" pode causar problemas em alguns compiladores/ferramentas. Use "MELLO" em código Solidity.
-
+**Nota:** O caractere "Ø" pode causar problemas em alguns compiladores/ferramentas. Use "MELLO" em
+código Solidity.
