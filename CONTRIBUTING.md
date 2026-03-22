@@ -1,142 +1,23 @@
 # Contributing
 
-Thank you for considering contributing to this project! This document provides guidelines and
-standards for contributions.
+Keep contributions small, clear, and easy to review.
 
-[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/neomello)
+## Default flow
 
-## Code of Conduct
+1.  Create a branch from `main`.
+2.  Make one focused change.
+3.  Update docs when behavior changes.
+4.  Open a pull request with enough context to review quickly.
 
-This project follows NEØ development standards. Please maintain a respectful and professional
-environment in all interactions.
+## Practical rules
 
-## Development Process
+- Use descriptive commit messages.
+- Do not commit secrets, credentials, or local environment files.
+- Prefer simple solutions over framework-heavy scaffolding.
+- Add new automation only when it solves a recurring problem.
 
-This project uses a `main`-based branching model aligned with modern DevSecOps practices.
+## Before opening a PR
 
-- All new features and fixes are merged into the `main` branch via Pull Request
-- Use descriptive branches for features (`feature/feature-name`)
-- Use branches for experiments (`experiment/name`)
-
-## How to Contribute
-
-### 1. Fork and Clone
-
-1.  Fork the repository
-2.  Clone your fork
-3.  Add upstream: `git remote add upstream <original-repo-url>`
-
-### 2. Create Branch
-
-```bash
-git checkout -b feature/feature-name
-# or
-git checkout -b fix/bug-description
-```
-
-### 3. Development
-
-- **Always** follow established code standards
-- **Always** add tests if adding new functionality
-- **Never** commit credentials or private keys
-- **Always** verify security before committing
-
-### 4. Commit
-
-- Use descriptive commit messages
-- Follow the pattern: `type: brief description`
-- Examples:
-- `feat: add new feature`
-- `fix: fix specific bug`
-- `docs: update documentation`
-
-### 5. Pull Request
-
-1.  Ensure all tests pass
-2.  Update documentation if necessary
-3.  Clearly describe changes in the PR
-4.  Reference related issues if applicable
-
-## Code Standards
-
-### Formatting
-
-- Use 2 spaces for indentation (as per `.editorconfig`)
-- Use 4 spaces for Python/Solidity
-- **ALWAYS** add blank line after Markdown headers
-- Remove trailing whitespace
-- Add final newline
-
-### Security
-
-- **NEVER** commit `.env`, `.key`, `.secret` files
-- **NEVER** expose private keys or credentials
-- **ALWAYS** use environment variables for sensitive configurations
-- **ALWAYS** verify security before committing
-
-### Blockchain/Solidity/AI
-
-- **Solidity Contracts**: Always maintain backups before modifying
-- **Private Keys**: NEVER store in code or versioned files
-- **AI Models**: Protect large model files
-- **Deploy Scripts**: Always verify before executing in production
-
-## Project Structure
-
-### Protected Architecture
-
-STRUCTURE PROTECTED BY NEØ ARCHITECTURE
-
-Consult `.cursorrules` for the protected project structure.
-
-**NEVER** modify folders or rename files without authorization.
-
-## Pre-Commit Checks
-
-Run these checks before committing:
-
-```bash
-# Check git status
-git status
-
-# Check changes
-git diff
-
-# Check security (if available)
-make check-security
-```
-
-## Pull Request Checklist
-
-- [ ] Code follows established standards
-- [ ] Tests pass (if applicable)
-- [ ] Documentation updated
-- [ ] No credentials or private keys exposed
-- [ ] Descriptive commit messages
-- [ ] Correct formatting (blank line after headers)
-
-## Reporting Issues
-
-Use GitHub Issues to report bugs or suggest features:
-
-- Use descriptive titles
-- Provide steps to reproduce (if bug)
-- Include environment information when relevant
-- Be clear and objective
-
-## Questions?
-
-If you have questions about how to contribute, open an issue or contact the maintainers.
-
-## License
-
-By contributing, you agree that your contributions will be licensed under the same license as the
-project.
-
----
-
-[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/neomello)
-
-**Author:** MELLØ // NEØ DEV
-
-This project follows NEØ development standards. Changes are allowed, inconsistency is not.
+- Run the checks relevant to your change.
+- Review your diff once before pushing.
+- Explain risks, assumptions, and test steps in the PR.

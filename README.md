@@ -1,86 +1,43 @@
-# NEØ — Dev Workspace
+# NEØ Template
 
-**A template-based continuity system for development.**
+Minimal baseline for new repositories.
 
-Work must survive failure.
+This template is designed to give each new project a clean start with a few practical defaults:
 
-This repository is not a personal setup. It is a **replicable template** designed to be forked,
-adapted and maintained as a long-living development workspace.
+- sane Git and editor defaults
+- lightweight documentation
+- basic CI for Markdown and formatting
+- Dependabot for dependency and workflow updates
 
-[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/neomello)
+## What stays
 
----
+- `.editorconfig`, `.gitignore`, `.gitattributes`
+- `.github/workflows/ci.yml`
+- `.github/dependabot.yml`
+- `README.md`, `CONTRIBUTING.md`, `SECURITY.md`
+- `standards/README.md`
+- `standards/readme.template.md`
 
-## Why this exists
+## What this template avoids
 
-Most development environments are fragile, implicit and impossible to rebuild.
+- environment-specific setup
+- organization-heavy governance docs
+- fragile automation that depends on repository settings
+- rules that create noise without protecting quality
 
-NEØ Dev Workspace exists to enforce one idea: **your environment must be recoverable, deterministic
-and portable**.
+## How to use
 
-If a machine disappears, context does not.
+1.  Create a new repository from this template.
+2.  Update `README.md` with your project scope.
+3.  Adjust or remove `CODEOWNERS`, `PULL_REQUEST_TEMPLATE.md`, and `dependabot.yml` as needed.
+4.  Add project-specific tooling only after the first real need appears.
 
----
+## CI
 
-## What you get
+The default CI checks only two things:
 
-- Codified standards for shell, markdown and AI behavior
-- Automated installation and recovery
-- A clean structure for active projects
-- A reproducible environment that can be rebuilt from zero
+- Markdown lint for `*.md`
+- Prettier formatting for `*.md`, `*.json`, `*.yml`, `*.yaml`
 
-This repository does not document the environment. It **recreates** it.
-
----
-
-## Quick Start
-
-```bash
-cd ~/CODIGOS
-git clone https://github.com/neomello/neo-template neo-dev
-cd neo-dev
-chmod +x scripts/install.sh
-./scripts/install.sh
-```
-
-Secrets are externalized by design:
-
-```bash
-cursor ~/.zshrc.secrets
-source ~/.zshrc
-```
-
-New machine. Same context.
-
----
-
-## Why sponsor this
-
-This work is public, but it is not free.
-
-Sponsoring means supporting:
-
-- Reproducible development environments
-- Failure-resistant workflows
-- Infrastructure that outlives hardware
-
-You are not sponsoring a person. You are sponsoring a **pattern**.
-
-If this template saved you time, prevented loss, or clarified your workflow, sponsorship is simply
-returning value to the system.
-
-[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/neomello)
-
----
-
-## Repository
-
-[https://github.com/neomello/neo-template](https://github.com/neomello/neo-template)
-
----
-
-> Expand until silence becomes structure.
-
-**Author:** MELLØ **Protocol:** NEØ
-
-This template evolves. Inconsistency does not.
+That is enough for a baseline. Everything else should be earned by the project, not inherited by
+inertia.
