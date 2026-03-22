@@ -84,4 +84,4 @@ Conteúdo aqui.
 
 -  Ver `standards/markdown.rules.md` para regras completas de Markdown
 -  Ver `standards/README.md` para padrões de trabalho
--  Ver `.markdown-style-guide.md` para guia completo
+-  Ver `standards/markdown.ascii-style.md` para guia de estilo visual ASCII

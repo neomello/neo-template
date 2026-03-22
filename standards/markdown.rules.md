@@ -136,4 +136,4 @@ Este projeto usa:
 -  **Prettier** (`.prettierrc.json`) - Formatação automática
 -  **Markdownlint** (`.markdownlint.json`) - Validação de estilo
 
-Ver `.markdown-style-guide.md` para guia completo.
+Ver `standards/markdown.ascii-style.md` para guia de estilo visual ASCII.

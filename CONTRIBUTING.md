@@ -2,7 +2,7 @@
 
 Thank you for considering contributing to this project! This document provides guidelines and standards for contributions.
 
-<iframe src="https://github.com/sponsors/neomello/card" title="Sponsor neomello" height="225" width="600" style="border: 0;"></iframe>
+[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/neomello)
 
 ## Code of Conduct
 
@@ -132,7 +132,7 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 ---
 
-<iframe src="https://github.com/sponsors/neomello/button" title="Sponsor neomello" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/neomello)
 
 **Author:** MELLØ // NEØ DEV
 

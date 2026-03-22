@@ -93,7 +93,7 @@ We appreciate the security research community's efforts to keep our projects sec
 
 ---
 
-<iframe src="https://github.com/sponsors/neomello/button" title="Sponsor neomello" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+[![Sponsor neomello](https://img.shields.io/badge/Sponsor-neomello-ff008e?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/neomello)
 
 **Author:** MELLØ // NEØ DEV
 

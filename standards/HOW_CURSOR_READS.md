@@ -79,7 +79,7 @@ Se seguir os padrões = ✅ funcionando!
 - `.cursorrules` - Lido automaticamente pelo Cursor
 - `standards/ai.rules.md` - Regras específicas para assistentes
 - `standards/markdown.rules.md` - Regras de Markdown (CONSULTE SEMPRE)
-- `.markdown-style-guide.md` - Guia completo de estilo
+- `standards/markdown.ascii-style.md` - Guia de estilo visual ASCII
 
 ---
 
