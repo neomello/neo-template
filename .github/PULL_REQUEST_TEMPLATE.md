@@ -1,25 +1,12 @@
-# Descrição
+## Summary
 
-<!-- Explique sucintamente o que este PR faz. -->
+Describe the change in a few lines.
 
-## Tarefas
+## Validation
 
-- [ ] Descrição clara adicionada
-- [ ] Link para issue (se aplicável)
-- [ ] Testes/manuais explicados
-- [ ] CI verde
+- [ ] Checks passed
+- [ ] Test steps documented when needed
 
-## Como testar
+## Notes
 
-Explique os passos para validar as mudanças.
-
-## Tipo de mudança
-
-- bugfix
-- feature
-- docs
-- chore
-
-## Observações
-
-Coloque contexto adicional, riscos, ou passos de migração se houver.
+Add risks, assumptions, or rollout details if they matter.

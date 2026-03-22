@@ -1,22 +1,15 @@
-# Cursor Rules — Personal Dev Workspace
+# Cursor Rules
 
-This workspace follows my personal development standards.
-These rules are authoritative.
+Use this repository as a practical baseline, not a bureaucracy engine.
 
-## Critical Rules
+## Core defaults
 
--  ALWAYS add a blank line after any Markdown header.
--  Use 2 spaces for indentation.
--  Remove trailing whitespace and add final newline.
+- Keep files simple and readable.
+- Use 2 spaces for indentation unless the language convention is different.
+- Add a blank line after Markdown headers.
+- Remove trailing whitespace and keep a final newline.
 
-## References (consult when needed)
+## References
 
--  Work standards: `standards/README.md`
--  Workflow protocol: `standards/WORKFLOW.md` (resumo) / `neomello-workflow.md` (completo)
--  Markdown rules: `standards/markdown.rules.md`
--  AI behavior rules: `standards/ai.rules.md`
--  README template: `standards/readme.template.md`
--  Signature (projetos/READMEs): `standards/readme.signature.md`
--  Signature (contratos/tokens): `standards/readme.signature.contracts.md`
--  Contract template: `standards/contract.template.sol`
--  Links: `standards/links.md`
+- Project baseline: `standards/README.md`
+- README starter: `standards/readme.template.md`
