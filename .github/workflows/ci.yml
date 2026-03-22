@@ -29,7 +29,7 @@ jobs:
           node-version: '20'
 
       - name: Install Prettier
-        run: npm install --global prettier
+        run: npm install --global prettier@3.8.1
 
       - name: Check formatting
         run: prettier --check "**/*.{md,json,yml,yaml}"
